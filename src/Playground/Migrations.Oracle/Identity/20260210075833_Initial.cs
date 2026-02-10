@@ -16,18 +16,18 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
-                    Name = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: false),
+                    Name = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: true),
                     Description = table.Column<string>(type: "NVARCHAR2(1024)", maxLength: 1024, nullable: true),
-                    IsDefault = table.Column<bool>(type: "BOOLEAN", nullable: false),
-                    IsSystemGroup = table.Column<bool>(type: "BOOLEAN", nullable: false),
+                    IsDefault = table.Column<bool>(type: "NUMBER(1)", nullable: false),
+                    IsSystemGroup = table.Column<bool>(type: "NUMBER(1)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
                     CreatedBy = table.Column<string>(type: "NVARCHAR2(450)", maxLength: 450, nullable: true),
                     ModifiedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: true),
                     ModifiedBy = table.Column<string>(type: "NVARCHAR2(450)", maxLength: 450, nullable: true),
-                    IsDeleted = table.Column<bool>(type: "BOOLEAN", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "NUMBER(1)", nullable: false),
                     DeletedOnUtc = table.Column<DateTimeOffset>(type: "TIMESTAMP(7) WITH TIME ZONE", nullable: true),
                     DeletedBy = table.Column<string>(type: "NVARCHAR2(450)", maxLength: 450, nullable: true),
-                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
+                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -40,7 +40,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
                     HandlerName = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: false),
-                    EventType = table.Column<string>(type: "NVARCHAR2(512)", maxLength: 512, nullable: false),
+                    EventType = table.Column<string>(type: "NVARCHAR2(512)", maxLength: 512, nullable: true),
                     ProcessedOnUtc = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
                     TenantId = table.Column<string>(type: "NVARCHAR2(64)", maxLength: 64, nullable: true)
                 },
@@ -55,14 +55,14 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
                     CreatedOnUtc = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
-                    Type = table.Column<string>(type: "NVARCHAR2(512)", maxLength: 512, nullable: false),
-                    Payload = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    Type = table.Column<string>(type: "NVARCHAR2(512)", maxLength: 512, nullable: true),
+                    Payload = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     TenantId = table.Column<string>(type: "NVARCHAR2(64)", maxLength: 64, nullable: true),
                     CorrelationId = table.Column<string>(type: "NVARCHAR2(128)", maxLength: 128, nullable: true),
                     ProcessedOnUtc = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: true),
                     RetryCount = table.Column<int>(type: "NUMBER(10)", nullable: false),
                     LastError = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    IsDead = table.Column<bool>(type: "BOOLEAN", nullable: false)
+                    IsDead = table.Column<bool>(type: "NUMBER(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -75,7 +75,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                 {
                     Id = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
                     Description = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    TenantId = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
+                    TenantId = table.Column<string>(type: "NVARCHAR2(450)", nullable: true),
                     Name = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
@@ -93,25 +93,25 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     FirstName = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     LastName = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     ImageUrl = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    IsActive = table.Column<bool>(type: "BOOLEAN", nullable: false),
+                    IsActive = table.Column<bool>(type: "NUMBER(1)", nullable: false),
                     RefreshToken = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     RefreshTokenExpiryTime = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
                     ObjectId = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: true),
                     LastPasswordChangeDate = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
-                    TenantId = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
+                    TenantId = table.Column<string>(type: "NVARCHAR2(450)", nullable: true),
                     UserName = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: true),
                     NormalizedEmail = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: true),
-                    EmailConfirmed = table.Column<bool>(type: "BOOLEAN", nullable: false),
+                    EmailConfirmed = table.Column<bool>(type: "NUMBER(1)", nullable: false),
                     PasswordHash = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     SecurityStamp = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     PhoneNumber = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    PhoneNumberConfirmed = table.Column<bool>(type: "BOOLEAN", nullable: false),
-                    TwoFactorEnabled = table.Column<bool>(type: "BOOLEAN", nullable: false),
+                    PhoneNumberConfirmed = table.Column<bool>(type: "NUMBER(1)", nullable: false),
+                    TwoFactorEnabled = table.Column<bool>(type: "NUMBER(1)", nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(type: "TIMESTAMP(7) WITH TIME ZONE", nullable: true),
-                    LockoutEnabled = table.Column<bool>(type: "BOOLEAN", nullable: false),
+                    LockoutEnabled = table.Column<bool>(type: "NUMBER(1)", nullable: false),
                     AccessFailedCount = table.Column<int>(type: "NUMBER(10)", nullable: false)
                 },
                 constraints: table =>
@@ -125,7 +125,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                 {
                     GroupId = table.Column<Guid>(type: "RAW(16)", nullable: false),
                     RoleId = table.Column<string>(type: "NVARCHAR2(450)", maxLength: 450, nullable: false),
-                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
+                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -152,8 +152,8 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
                     CreatedBy = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     CreatedOn = table.Column<DateTimeOffset>(type: "TIMESTAMP(7) WITH TIME ZONE", nullable: false),
-                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
-                    RoleId = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
+                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
+                    RoleId = table.Column<string>(type: "NVARCHAR2(450)", nullable: true),
                     ClaimType = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     ClaimValue = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
                 },
@@ -174,8 +174,8 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                 {
                     Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
                         .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
-                    UserId = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: false),
-                    PasswordHash = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    UserId = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: true),
+                    PasswordHash = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP")
                 },
                 constraints: table =>
@@ -195,10 +195,10 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                 {
                     Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
                         .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
-                    UserId = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
+                    UserId = table.Column<string>(type: "NVARCHAR2(450)", nullable: true),
                     ClaimType = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     ClaimValue = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
+                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -219,7 +219,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     GroupId = table.Column<Guid>(type: "RAW(16)", nullable: false),
                     AddedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
                     AddedBy = table.Column<string>(type: "NVARCHAR2(450)", maxLength: 450, nullable: true),
-                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
+                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -245,8 +245,8 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     LoginProvider = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
                     ProviderKey = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
                     ProviderDisplayName = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    UserId = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
-                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
+                    UserId = table.Column<string>(type: "NVARCHAR2(450)", nullable: true),
+                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -265,7 +265,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                 {
                     UserId = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
                     RoleId = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
-                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
+                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -289,10 +289,10 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
-                    UserId = table.Column<string>(type: "NVARCHAR2(450)", maxLength: 450, nullable: false),
-                    RefreshTokenHash = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: false),
-                    IpAddress = table.Column<string>(type: "NVARCHAR2(45)", maxLength: 45, nullable: false),
-                    UserAgent = table.Column<string>(type: "NVARCHAR2(1024)", maxLength: 1024, nullable: false),
+                    UserId = table.Column<string>(type: "NVARCHAR2(450)", maxLength: 450, nullable: true),
+                    RefreshTokenHash = table.Column<string>(type: "NVARCHAR2(256)", maxLength: 256, nullable: true),
+                    IpAddress = table.Column<string>(type: "NVARCHAR2(45)", maxLength: 45, nullable: true),
+                    UserAgent = table.Column<string>(type: "NVARCHAR2(1024)", maxLength: 1024, nullable: true),
                     DeviceType = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: true),
                     Browser = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: true),
                     BrowserVersion = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: true),
@@ -301,7 +301,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     CreatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
                     LastActivityAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
                     ExpiresAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
-                    IsRevoked = table.Column<bool>(type: "BOOLEAN", nullable: false),
+                    IsRevoked = table.Column<bool>(type: "NUMBER(1)", nullable: false),
                     RevokedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: true),
                     RevokedBy = table.Column<string>(type: "NVARCHAR2(450)", maxLength: 450, nullable: true),
                     RevokedReason = table.Column<string>(type: "NVARCHAR2(500)", maxLength: 500, nullable: true)
@@ -325,7 +325,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     LoginProvider = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
                     Name = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
                     Value = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
+                    TenantId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -382,8 +382,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                 name: "RoleNameIndex",
                 table: "Roles",
                 columns: new[] { "NormalizedName", "TenantId" },
-                unique: true,
-                filter: "\"NormalizedName\" IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserClaims_UserId",
@@ -419,8 +418,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                 name: "UserNameIndex",
                 table: "Users",
                 columns: new[] { "NormalizedUserName", "TenantId" },
-                unique: true,
-                filter: "\"NormalizedUserName\" IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserSessions_RefreshTokenHash",

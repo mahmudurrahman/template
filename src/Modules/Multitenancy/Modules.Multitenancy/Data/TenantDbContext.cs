@@ -29,6 +29,6 @@ public class TenantDbContext : EFCoreStoreDbContext<AppTenantInfo>
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(TenantDbContext).Assembly);
-        modelBuilder.RemoveSchemasForOracle(this);
+        modelBuilder.ApplyOracleConventions(this);
     }
 }

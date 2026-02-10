@@ -20,7 +20,7 @@ namespace FSH.Playground.Migrations.Oracle.Audit
                     ReceivedAtUtc = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
                     EventType = table.Column<int>(type: "NUMBER(10)", nullable: false),
                     Severity = table.Column<byte>(type: "NUMBER(3)", nullable: false),
-                    TenantId = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
+                    TenantId = table.Column<string>(type: "NVARCHAR2(450)", nullable: true),
                     UserId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     UserName = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     TraceId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
@@ -29,7 +29,7 @@ namespace FSH.Playground.Migrations.Oracle.Audit
                     RequestId = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     Source = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
                     Tags = table.Column<long>(type: "NUMBER(19)", nullable: false),
-                    PayloadJson = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
+                    PayloadJson = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
                 },
                 constraints: table =>
                 {

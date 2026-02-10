@@ -12,7 +12,7 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace FSH.Playground.Migrations.Oracle.MultiTenancy
 {
     [DbContext(typeof(TenantDbContext))]
-    [Migration("20260210064127_Initial")]
+    [Migration("20260210075824_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -31,19 +31,16 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.Property<string>("AdminEmail")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("ConnectionString")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("Identifier")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<string>("Issuer")
                         .HasColumnType("NVARCHAR2(2000)");
@@ -69,12 +66,10 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                         .HasColumnType("RAW(16)");
 
                     b.Property<string>("BackgroundColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("BorderRadius")
-                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("NVARCHAR2(20)");
 
@@ -86,47 +81,38 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                         .HasColumnType("TIMESTAMP(7) WITH TIME ZONE");
 
                     b.Property<string>("DarkBackgroundColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("DarkErrorColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("DarkInfoColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("DarkPrimaryColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("DarkSecondaryColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("DarkSuccessColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("DarkSurfaceColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("DarkTertiaryColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("DarkWarningColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
@@ -134,7 +120,6 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                         .HasColumnType("NUMBER(10)");
 
                     b.Property<string>("ErrorColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
@@ -143,7 +128,6 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                         .HasColumnType("NCLOB");
 
                     b.Property<string>("FontFamily")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("NVARCHAR2(200)");
 
@@ -151,17 +135,15 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                         .HasColumnType("BINARY_DOUBLE");
 
                     b.Property<string>("HeadingFontFamily")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("NVARCHAR2(200)");
 
                     b.Property<string>("InfoColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<bool>("IsDefault")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<string>("LastModifiedBy")
                         .HasMaxLength(256)
@@ -182,37 +164,30 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                         .HasColumnType("NCLOB");
 
                     b.Property<string>("PrimaryColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("SecondaryColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("SuccessColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("SurfaceColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasMaxLength(64)
                         .HasColumnType("NVARCHAR2(64)");
 
                     b.Property<string>("TertiaryColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
                     b.Property<string>("WarningColor")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("NVARCHAR2(9)");
 
@@ -234,7 +209,6 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                         .HasColumnType("TIMESTAMP(7)");
 
                     b.Property<string>("CorrelationId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<DateTime>("CreatedUtc")
@@ -256,7 +230,6 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                         .HasColumnType("NUMBER(10)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.HasKey("Id");

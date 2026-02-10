@@ -12,7 +12,7 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace FSH.Playground.Migrations.Oracle.Audit
 {
     [DbContext(typeof(AuditDbContext))]
-    [Migration("20260210064146_Initial")]
+    [Migration("20260210075841_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -41,7 +41,6 @@ namespace FSH.Playground.Migrations.Oracle.Audit
                         .HasColumnType("TIMESTAMP(7)");
 
                     b.Property<string>("PayloadJson")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<DateTime>("ReceivedAtUtc")
@@ -63,7 +62,6 @@ namespace FSH.Playground.Migrations.Oracle.Audit
                         .HasColumnType("NUMBER(19)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.Property<string>("TraceId")

@@ -12,11 +12,13 @@ public static class ModelBuilderExtensions
     private const string OracleProviderName = "Oracle.EntityFrameworkCore";
 
     /// <summary>
-    /// Removes schema from all entity types when running on Oracle.
-    /// Oracle maps EF Core schemas to Oracle users, which requires DBA privileges to create.
-    /// Stripping schemas places all tables in the connecting user's default schema.
+    /// Applies Oracle-specific conventions to the model:
+    /// 1. Removes schemas (Oracle maps schemas to users requiring DBA privileges).
+    /// 2. Remaps bool columns from BOOLEAN to NUMBER(1) for broad Oracle version compatibility.
+    /// 3. Removes filtered index expressions (Oracle does not support partial indexes).
+    /// 4. Makes non-PK string columns nullable (Oracle treats empty strings as NULL).
     /// </summary>
-    public static ModelBuilder RemoveSchemasForOracle(this ModelBuilder modelBuilder, DbContext context)
+    public static ModelBuilder ApplyOracleConventions(this ModelBuilder modelBuilder, DbContext context)
     {
         ArgumentNullException.ThrowIfNull(modelBuilder);
         ArgumentNullException.ThrowIfNull(context);
@@ -29,6 +31,31 @@ public static class ModelBuilderExtensions
         foreach (var entityType in modelBuilder.Model.GetEntityTypes())
         {
             entityType.SetSchema(null);
+
+            var primaryKeyProperties = entityType.FindPrimaryKey()?.Properties.ToHashSet() ?? [];
+
+            foreach (var property in entityType.GetProperties())
+            {
+                if (property.ClrType == typeof(bool) || property.ClrType == typeof(bool?))
+                {
+                    property.SetColumnType("NUMBER(1)");
+                }
+
+                // Oracle treats '' (empty string) as NULL, so non-PK string columns
+                // must be nullable to avoid ORA-01400 on empty string inserts.
+                if (property.ClrType == typeof(string) && !property.IsNullable && !primaryKeyProperties.Contains(property))
+                {
+                    property.IsNullable = true;
+                }
+            }
+
+            foreach (var index in entityType.GetIndexes())
+            {
+                if (index.GetFilter() is not null)
+                {
+                    index.SetFilter(null);
+                }
+            }
         }
 
         return modelBuilder;

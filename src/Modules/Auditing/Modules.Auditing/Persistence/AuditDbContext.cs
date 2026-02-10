@@ -22,6 +22,6 @@ public sealed class AuditDbContext : BaseDbContext
     {
         ArgumentNullException.ThrowIfNull(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AuditDbContext).Assembly);
-        modelBuilder.RemoveSchemasForOracle(this);
+        modelBuilder.ApplyOracleConventions(this);
     }
 }

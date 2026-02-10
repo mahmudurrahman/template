@@ -32,7 +32,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(256)");
 
                     b.Property<string>("EventType")
-                        .IsRequired()
                         .HasMaxLength(512)
                         .HasColumnType("NVARCHAR2(512)");
 
@@ -62,13 +61,12 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("TIMESTAMP(7)");
 
                     b.Property<bool>("IsDead")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<string>("LastError")
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("Payload")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<DateTime?>("ProcessedOnUtc")
@@ -82,7 +80,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(64)");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasMaxLength(512)
                         .HasColumnType("NVARCHAR2(512)");
 
@@ -112,15 +109,13 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(256)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedName", "TenantId")
                         .IsUnique()
-                        .HasDatabaseName("RoleNameIndex")
-                        .HasFilter("\"NormalizedName\" IS NOT NULL");
+                        .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("Roles", (string)null);
 
@@ -148,11 +143,9 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("TIMESTAMP(7) WITH TIME ZONE");
 
                     b.Property<string>("RoleId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.HasKey("Id");
@@ -181,7 +174,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(256)");
 
                     b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<string>("FirstName")
                         .HasColumnType("NVARCHAR2(2000)");
@@ -190,7 +183,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<string>("LastName")
                         .HasColumnType("NVARCHAR2(2000)");
@@ -199,7 +192,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("TIMESTAMP(7)");
 
                     b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("TIMESTAMP(7) WITH TIME ZONE");
@@ -223,7 +216,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<string>("RefreshToken")
                         .HasColumnType("NVARCHAR2(2000)");
@@ -235,11 +228,10 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
@@ -252,8 +244,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasIndex("NormalizedUserName", "TenantId")
                         .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("\"NormalizedUserName\" IS NOT NULL");
+                        .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("Users", (string)null);
 
@@ -287,13 +278,13 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(1024)");
 
                     b.Property<bool>("IsDefault")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<bool>("IsSystemGroup")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<DateTime?>("ModifiedAt")
                         .HasColumnType("TIMESTAMP(7)");
@@ -303,12 +294,10 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("NVARCHAR2(256)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.HasKey("Id");
@@ -334,7 +323,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.HasKey("GroupId", "RoleId");
@@ -362,11 +350,9 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<string>("PasswordHash")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("NVARCHAR2(256)");
 
@@ -398,7 +384,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.HasKey("UserId", "GroupId");
@@ -439,12 +424,11 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("TIMESTAMP(7)");
 
                     b.Property<string>("IpAddress")
-                        .IsRequired()
                         .HasMaxLength(45)
                         .HasColumnType("NVARCHAR2(45)");
 
                     b.Property<bool>("IsRevoked")
-                        .HasColumnType("BOOLEAN");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<DateTime>("LastActivityAt")
                         .HasColumnType("TIMESTAMP(7)");
@@ -458,7 +442,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(50)");
 
                     b.Property<string>("RefreshTokenHash")
-                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("NVARCHAR2(256)");
 
@@ -474,12 +457,10 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(500)");
 
                     b.Property<string>("UserAgent")
-                        .IsRequired()
                         .HasMaxLength(1024)
                         .HasColumnType("NVARCHAR2(1024)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("NVARCHAR2(450)");
 
@@ -509,11 +490,9 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.HasKey("Id");
@@ -537,11 +516,9 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.HasKey("LoginProvider", "ProviderKey");
@@ -562,7 +539,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.HasKey("UserId", "RoleId");
@@ -586,7 +562,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("Value")
@@ -632,8 +607,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     b.HasOne("FSH.Modules.Identity.Domain.FshUser", "User")
                         .WithMany("PasswordHistories")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("User");
                 });
@@ -662,8 +636,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     b.HasOne("FSH.Modules.Identity.Domain.FshUser", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("User");
                 });

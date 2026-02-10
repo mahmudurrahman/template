@@ -38,7 +38,6 @@ namespace FSH.Playground.Migrations.Oracle.Audit
                         .HasColumnType("TIMESTAMP(7)");
 
                     b.Property<string>("PayloadJson")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<DateTime>("ReceivedAtUtc")
@@ -60,7 +59,6 @@ namespace FSH.Playground.Migrations.Oracle.Audit
                         .HasColumnType("NUMBER(19)");
 
                     b.Property<string>("TenantId")
-                        .IsRequired()
                         .HasColumnType("NVARCHAR2(450)");
 
                     b.Property<string>("TraceId")
