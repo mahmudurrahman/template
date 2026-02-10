@@ -11,12 +11,8 @@ namespace FSH.Playground.Migrations.Oracle.Identity
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.EnsureSchema(
-                name: "identity");
-
             migrationBuilder.CreateTable(
                 name: "Groups",
-                schema: "identity",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
@@ -40,7 +36,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "InboxMessages",
-                schema: "identity",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
@@ -56,7 +51,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "OutboxMessages",
-                schema: "identity",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
@@ -77,7 +71,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "Roles",
-                schema: "identity",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
@@ -94,7 +87,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "Users",
-                schema: "identity",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
@@ -129,7 +121,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "GroupRoles",
-                schema: "identity",
                 columns: table => new
                 {
                     GroupId = table.Column<Guid>(type: "RAW(16)", nullable: false),
@@ -142,14 +133,12 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     table.ForeignKey(
                         name: "FK_GroupRoles_Groups_GroupId",
                         column: x => x.GroupId,
-                        principalSchema: "identity",
                         principalTable: "Groups",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_GroupRoles_Roles_RoleId",
                         column: x => x.RoleId,
-                        principalSchema: "identity",
                         principalTable: "Roles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -157,7 +146,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "RoleClaims",
-                schema: "identity",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
@@ -175,7 +163,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     table.ForeignKey(
                         name: "FK_RoleClaims_Roles_RoleId",
                         column: x => x.RoleId,
-                        principalSchema: "identity",
                         principalTable: "Roles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -183,7 +170,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "PasswordHistory",
-                schema: "identity",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
@@ -198,7 +184,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     table.ForeignKey(
                         name: "FK_PasswordHistory_Users_UserId",
                         column: x => x.UserId,
-                        principalSchema: "identity",
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -206,7 +191,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "UserClaims",
-                schema: "identity",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
@@ -222,7 +206,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     table.ForeignKey(
                         name: "FK_UserClaims_Users_UserId",
                         column: x => x.UserId,
-                        principalSchema: "identity",
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -230,7 +213,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "UserGroups",
-                schema: "identity",
                 columns: table => new
                 {
                     UserId = table.Column<string>(type: "NVARCHAR2(450)", maxLength: 450, nullable: false),
@@ -245,14 +227,12 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     table.ForeignKey(
                         name: "FK_UserGroups_Groups_GroupId",
                         column: x => x.GroupId,
-                        principalSchema: "identity",
                         principalTable: "Groups",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_UserGroups_Users_UserId",
                         column: x => x.UserId,
-                        principalSchema: "identity",
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -260,7 +240,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "UserLogins",
-                schema: "identity",
                 columns: table => new
                 {
                     LoginProvider = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
@@ -275,7 +254,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     table.ForeignKey(
                         name: "FK_UserLogins_Users_UserId",
                         column: x => x.UserId,
-                        principalSchema: "identity",
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -283,7 +261,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "UserRoles",
-                schema: "identity",
                 columns: table => new
                 {
                     UserId = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
@@ -296,14 +273,12 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     table.ForeignKey(
                         name: "FK_UserRoles_Roles_RoleId",
                         column: x => x.RoleId,
-                        principalSchema: "identity",
                         principalTable: "Roles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_UserRoles_Users_UserId",
                         column: x => x.UserId,
-                        principalSchema: "identity",
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -311,7 +286,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "UserSessions",
-                schema: "identity",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
@@ -338,7 +312,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     table.ForeignKey(
                         name: "FK_UserSessions_Users_UserId",
                         column: x => x.UserId,
-                        principalSchema: "identity",
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -346,7 +319,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateTable(
                 name: "UserTokens",
-                schema: "identity",
                 columns: table => new
                 {
                     UserId = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
@@ -361,7 +333,6 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                     table.ForeignKey(
                         name: "FK_UserTokens_Users_UserId",
                         column: x => x.UserId,
-                        principalSchema: "identity",
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -369,55 +340,46 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateIndex(
                 name: "IX_GroupRoles_GroupId",
-                schema: "identity",
                 table: "GroupRoles",
                 column: "GroupId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_GroupRoles_RoleId",
-                schema: "identity",
                 table: "GroupRoles",
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Groups_IsDefault",
-                schema: "identity",
                 table: "Groups",
                 column: "IsDefault");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Groups_IsDeleted",
-                schema: "identity",
                 table: "Groups",
                 column: "IsDeleted");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Groups_Name",
-                schema: "identity",
                 table: "Groups",
                 column: "Name");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PasswordHistory_UserId",
-                schema: "identity",
                 table: "PasswordHistory",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PasswordHistory_UserId_CreatedAt",
-                schema: "identity",
                 table: "PasswordHistory",
                 columns: new[] { "UserId", "CreatedAt" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_RoleClaims_RoleId",
-                schema: "identity",
                 table: "RoleClaims",
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
                 name: "RoleNameIndex",
-                schema: "identity",
                 table: "Roles",
                 columns: new[] { "NormalizedName", "TenantId" },
                 unique: true,
@@ -425,43 +387,36 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserClaims_UserId",
-                schema: "identity",
                 table: "UserClaims",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserGroups_GroupId",
-                schema: "identity",
                 table: "UserGroups",
                 column: "GroupId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserGroups_UserId",
-                schema: "identity",
                 table: "UserGroups",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserLogins_UserId",
-                schema: "identity",
                 table: "UserLogins",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserRoles_RoleId",
-                schema: "identity",
                 table: "UserRoles",
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
                 name: "EmailIndex",
-                schema: "identity",
                 table: "Users",
                 column: "NormalizedEmail");
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",
-                schema: "identity",
                 table: "Users",
                 columns: new[] { "NormalizedUserName", "TenantId" },
                 unique: true,
@@ -469,19 +424,16 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserSessions_RefreshTokenHash",
-                schema: "identity",
                 table: "UserSessions",
                 column: "RefreshTokenHash");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserSessions_UserId",
-                schema: "identity",
                 table: "UserSessions",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserSessions_UserId_IsRevoked",
-                schema: "identity",
                 table: "UserSessions",
                 columns: new[] { "UserId", "IsRevoked" });
         }
@@ -490,60 +442,46 @@ namespace FSH.Playground.Migrations.Oracle.Identity
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "GroupRoles",
-                schema: "identity");
+                name: "GroupRoles");
 
             migrationBuilder.DropTable(
-                name: "InboxMessages",
-                schema: "identity");
+                name: "InboxMessages");
 
             migrationBuilder.DropTable(
-                name: "OutboxMessages",
-                schema: "identity");
+                name: "OutboxMessages");
 
             migrationBuilder.DropTable(
-                name: "PasswordHistory",
-                schema: "identity");
+                name: "PasswordHistory");
 
             migrationBuilder.DropTable(
-                name: "RoleClaims",
-                schema: "identity");
+                name: "RoleClaims");
 
             migrationBuilder.DropTable(
-                name: "UserClaims",
-                schema: "identity");
+                name: "UserClaims");
 
             migrationBuilder.DropTable(
-                name: "UserGroups",
-                schema: "identity");
+                name: "UserGroups");
 
             migrationBuilder.DropTable(
-                name: "UserLogins",
-                schema: "identity");
+                name: "UserLogins");
 
             migrationBuilder.DropTable(
-                name: "UserRoles",
-                schema: "identity");
+                name: "UserRoles");
 
             migrationBuilder.DropTable(
-                name: "UserSessions",
-                schema: "identity");
+                name: "UserSessions");
 
             migrationBuilder.DropTable(
-                name: "UserTokens",
-                schema: "identity");
+                name: "UserTokens");
 
             migrationBuilder.DropTable(
-                name: "Groups",
-                schema: "identity");
+                name: "Groups");
 
             migrationBuilder.DropTable(
-                name: "Roles",
-                schema: "identity");
+                name: "Roles");
 
             migrationBuilder.DropTable(
-                name: "Users",
-                schema: "identity");
+                name: "Users");
         }
     }
 }

@@ -63,6 +63,7 @@ public class IdentityDbContext : MultiTenantIdentityDbContext<FshUser,
 
         builder.ApplyConfiguration(new OutboxMessageConfiguration(IdentityModuleConstants.SchemaName));
         builder.ApplyConfiguration(new InboxMessageConfiguration(IdentityModuleConstants.SchemaName));
+        builder.RemoveSchemasForOracle(this);
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

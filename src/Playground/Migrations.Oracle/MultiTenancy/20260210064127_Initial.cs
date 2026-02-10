@@ -11,12 +11,8 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.EnsureSchema(
-                name: "tenant");
-
             migrationBuilder.CreateTable(
                 name: "TenantProvisionings",
-                schema: "tenant",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
@@ -37,7 +33,6 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
 
             migrationBuilder.CreateTable(
                 name: "Tenants",
-                schema: "tenant",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "NVARCHAR2(450)", nullable: false),
@@ -56,7 +51,6 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
 
             migrationBuilder.CreateTable(
                 name: "TenantThemes",
-                schema: "tenant",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
@@ -101,7 +95,6 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
 
             migrationBuilder.CreateTable(
                 name: "TenantProvisioningSteps",
-                schema: "tenant",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
@@ -118,7 +111,6 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                     table.ForeignKey(
                         name: "FK_TenantProvisioningSteps_TenantProvisionings_ProvisioningId",
                         column: x => x.ProvisioningId,
-                        principalSchema: "tenant",
                         principalTable: "TenantProvisionings",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -126,20 +118,17 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
 
             migrationBuilder.CreateIndex(
                 name: "IX_TenantProvisioningSteps_ProvisioningId",
-                schema: "tenant",
                 table: "TenantProvisioningSteps",
                 column: "ProvisioningId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tenants_Identifier",
-                schema: "tenant",
                 table: "Tenants",
                 column: "Identifier",
                 unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_TenantThemes_TenantId",
-                schema: "tenant",
                 table: "TenantThemes",
                 column: "TenantId",
                 unique: true);
@@ -149,20 +138,16 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "TenantProvisioningSteps",
-                schema: "tenant");
+                name: "TenantProvisioningSteps");
 
             migrationBuilder.DropTable(
-                name: "Tenants",
-                schema: "tenant");
+                name: "Tenants");
 
             migrationBuilder.DropTable(
-                name: "TenantThemes",
-                schema: "tenant");
+                name: "TenantThemes");
 
             migrationBuilder.DropTable(
-                name: "TenantProvisionings",
-                schema: "tenant");
+                name: "TenantProvisionings");
         }
     }
 }

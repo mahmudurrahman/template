@@ -12,7 +12,7 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace FSH.Playground.Migrations.Oracle.Identity
 {
     [DbContext(typeof(IdentityDbContext))]
-    [Migration("20260210055840_Initial")]
+    [Migration("20260210064137_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -48,7 +48,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasKey("Id", "HandlerName");
 
-                    b.ToTable("InboxMessages", "identity");
+                    b.ToTable("InboxMessages", (string)null);
                 });
 
             modelBuilder.Entity("FSH.Framework.Eventing.Outbox.OutboxMessage", b =>
@@ -91,7 +91,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasKey("Id");
 
-                    b.ToTable("OutboxMessages", "identity");
+                    b.ToTable("OutboxMessages", (string)null);
                 });
 
             modelBuilder.Entity("FSH.Modules.Identity.Domain.FshRole", b =>
@@ -125,7 +125,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("\"NormalizedName\" IS NOT NULL");
 
-                    b.ToTable("Roles", "identity");
+                    b.ToTable("Roles", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -162,7 +162,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("RoleClaims", "identity");
+                    b.ToTable("RoleClaims", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -258,7 +258,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("\"NormalizedUserName\" IS NOT NULL");
 
-                    b.ToTable("Users", "identity");
+                    b.ToTable("Users", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -322,7 +322,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasIndex("Name");
 
-                    b.ToTable("Groups", "identity");
+                    b.ToTable("Groups", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -346,7 +346,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("GroupRoles", "identity");
+                    b.ToTable("GroupRoles", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -379,7 +379,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasIndex("UserId", "CreatedAt");
 
-                    b.ToTable("PasswordHistory", "identity");
+                    b.ToTable("PasswordHistory", (string)null);
                 });
 
             modelBuilder.Entity("FSH.Modules.Identity.Domain.UserGroup", b =>
@@ -410,7 +410,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserGroups", "identity");
+                    b.ToTable("UserGroups", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -494,7 +494,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasIndex("UserId", "IsRevoked");
 
-                    b.ToTable("UserSessions", "identity");
+                    b.ToTable("UserSessions", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -523,7 +523,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserClaims", "identity");
+                    b.ToTable("UserClaims", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -551,7 +551,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserLogins", "identity");
+                    b.ToTable("UserLogins", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -572,7 +572,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("UserRoles", "identity");
+                    b.ToTable("UserRoles", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -597,7 +597,7 @@ namespace FSH.Playground.Migrations.Oracle.Identity
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("UserTokens", "identity");
+                    b.ToTable("UserTokens", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });

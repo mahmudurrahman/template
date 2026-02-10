@@ -1,4 +1,5 @@
 using Finbuckle.MultiTenant.EntityFrameworkCore.Stores;
+using FSH.Framework.Persistence;
 using FSH.Framework.Shared.Multitenancy;
 using FSH.Modules.Multitenancy.Domain;
 using FSH.Modules.Multitenancy.Provisioning;
@@ -28,5 +29,6 @@ public class TenantDbContext : EFCoreStoreDbContext<AppTenantInfo>
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(TenantDbContext).Assembly);
+        modelBuilder.RemoveSchemasForOracle(this);
     }
 }

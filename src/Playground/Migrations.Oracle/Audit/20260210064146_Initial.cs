@@ -11,12 +11,8 @@ namespace FSH.Playground.Migrations.Oracle.Audit
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.EnsureSchema(
-                name: "audit");
-
             migrationBuilder.CreateTable(
                 name: "AuditRecords",
-                schema: "audit",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
@@ -42,19 +38,16 @@ namespace FSH.Playground.Migrations.Oracle.Audit
 
             migrationBuilder.CreateIndex(
                 name: "IX_AuditRecords_EventType",
-                schema: "audit",
                 table: "AuditRecords",
                 column: "EventType");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AuditRecords_OccurredAtUtc",
-                schema: "audit",
                 table: "AuditRecords",
                 column: "OccurredAtUtc");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AuditRecords_TenantId",
-                schema: "audit",
                 table: "AuditRecords",
                 column: "TenantId");
         }
@@ -63,8 +56,7 @@ namespace FSH.Playground.Migrations.Oracle.Audit
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AuditRecords",
-                schema: "audit");
+                name: "AuditRecords");
         }
     }
 }

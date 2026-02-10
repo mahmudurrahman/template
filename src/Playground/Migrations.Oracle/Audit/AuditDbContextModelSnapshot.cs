@@ -80,7 +80,7 @@ namespace FSH.Playground.Migrations.Oracle.Audit
 
                     b.HasIndex("TenantId");
 
-                    b.ToTable("AuditRecords", "audit");
+                    b.ToTable("AuditRecords", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });

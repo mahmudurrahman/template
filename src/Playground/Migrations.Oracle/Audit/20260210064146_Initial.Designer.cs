@@ -12,7 +12,7 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace FSH.Playground.Migrations.Oracle.Audit
 {
     [DbContext(typeof(AuditDbContext))]
-    [Migration("20260210055848_Initial")]
+    [Migration("20260210064146_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -83,7 +83,7 @@ namespace FSH.Playground.Migrations.Oracle.Audit
 
                     b.HasIndex("TenantId");
 
-                    b.ToTable("AuditRecords", "audit");
+                    b.ToTable("AuditRecords", (string)null);
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });

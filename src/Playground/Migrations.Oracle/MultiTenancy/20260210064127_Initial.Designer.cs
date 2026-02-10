@@ -12,7 +12,7 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace FSH.Playground.Migrations.Oracle.MultiTenancy
 {
     [DbContext(typeof(TenantDbContext))]
-    [Migration("20260210055828_Initial")]
+    [Migration("20260210064127_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -59,7 +59,7 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                     b.HasIndex("Identifier")
                         .IsUnique();
 
-                    b.ToTable("Tenants", "tenant");
+                    b.ToTable("Tenants", (string)null);
                 });
 
             modelBuilder.Entity("FSH.Modules.Multitenancy.Domain.TenantTheme", b =>
@@ -221,7 +221,7 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
                     b.HasIndex("TenantId")
                         .IsUnique();
 
-                    b.ToTable("TenantThemes", "tenant");
+                    b.ToTable("TenantThemes", (string)null);
                 });
 
             modelBuilder.Entity("FSH.Modules.Multitenancy.Provisioning.TenantProvisioning", b =>
@@ -261,7 +261,7 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
 
                     b.HasKey("Id");
 
-                    b.ToTable("TenantProvisionings", "tenant");
+                    b.ToTable("TenantProvisionings", (string)null);
                 });
 
             modelBuilder.Entity("FSH.Modules.Multitenancy.Provisioning.TenantProvisioningStep", b =>
@@ -292,7 +292,7 @@ namespace FSH.Playground.Migrations.Oracle.MultiTenancy
 
                     b.HasIndex("ProvisioningId");
 
-                    b.ToTable("TenantProvisioningSteps", "tenant");
+                    b.ToTable("TenantProvisioningSteps", (string)null);
                 });
 
             modelBuilder.Entity("FSH.Modules.Multitenancy.Provisioning.TenantProvisioningStep", b =>
