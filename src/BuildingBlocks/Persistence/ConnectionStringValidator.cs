@@ -3,6 +3,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Npgsql;
+using Oracle.ManagedDataAccess.Client;
 
 namespace FSH.Framework.Persistence;
 
@@ -32,6 +33,9 @@ public sealed class ConnectionStringValidator(IOptions<DatabaseOptions> dbSettin
                     break;
                 case DbProviders.MSSQL:
                     _ = new SqlConnectionStringBuilder(connectionString);
+                    break;
+                case DbProviders.Oracle:
+                    _ = new OracleConnectionStringBuilder(connectionString);
                     break;
                 default:
                     break;

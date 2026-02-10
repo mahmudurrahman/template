@@ -1,3 +1,4 @@
+using FSH.Framework.Shared.Persistence;
 using Mediator;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -43,7 +44,9 @@ public static class Extensions
         // Shared ActivitySource for spans (Mediator, etc.)
         builder.Services.AddSingleton(new ActivitySource(builder.Environment.ApplicationName));
 
-        ConfigureMetricsAndTracing(builder, options, resourceBuilder);
+        string dbProvider = builder.Configuration.GetSection(nameof(DatabaseOptions))
+            .Get<DatabaseOptions>()?.Provider ?? DbProviders.PostgreSQL;
+        ConfigureMetricsAndTracing(builder, options, resourceBuilder, dbProvider);
 
         return builder;
     }
@@ -51,7 +54,8 @@ public static class Extensions
     private static void ConfigureMetricsAndTracing(
         IHostApplicationBuilder builder,
         OpenTelemetryOptions options,
-        ResourceBuilder resourceBuilder)
+        ResourceBuilder resourceBuilder,
+        string dbProvider)
     {
         builder.Services.AddOpenTelemetry()
             .ConfigureResource(rb => rb.AddService(builder.Environment.ApplicationName))
@@ -66,8 +70,12 @@ public static class Extensions
                     .SetResourceBuilder(resourceBuilder)
                     .AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
-                    .AddNpgsqlInstrumentation()
                     .AddRuntimeInstrumentation();
+
+                if (string.Equals(dbProvider, DbProviders.PostgreSQL, StringComparison.OrdinalIgnoreCase))
+                {
+                    metrics.AddNpgsqlInstrumentation();
+                }
 
                 // Apply histogram buckets for HTTP server duration
                 if (options.Http.Histograms.Enabled)
@@ -109,7 +117,6 @@ public static class Extensions
                         instrumentation.EnrichWithHttpResponse = EnrichWithHttpResponse;
                     })
                     .AddHttpClientInstrumentation()
-                    .AddNpgsql()
                     .AddEntityFrameworkCoreInstrumentation()
                     .AddRedisInstrumentation(redis =>
                     {
@@ -120,6 +127,11 @@ public static class Extensions
                     })
                     .AddSource(builder.Environment.ApplicationName)
                     .AddSource("FSH.Hangfire");
+
+                if (string.Equals(dbProvider, DbProviders.PostgreSQL, StringComparison.OrdinalIgnoreCase))
+                {
+                    tracing.AddNpgsql();
+                }
 
                 if (options.Exporter.Otlp.Enabled)
                 {

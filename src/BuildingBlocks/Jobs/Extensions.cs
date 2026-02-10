@@ -2,6 +2,7 @@
 using FSH.Framework.Jobs.Services;
 using FSH.Framework.Shared.Persistence;
 using Hangfire;
+using Hangfire.MemoryStorage;
 using Hangfire.PostgreSql;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -48,6 +49,12 @@ public static class Extensions
 
                 case DbProviders.MSSQL:
                     config.UseSqlServerStorage(dbOptions.ConnectionString);
+                    break;
+
+                case DbProviders.Oracle:
+                    // No production-ready Hangfire.Oracle package exists.
+                    // Jobs will not persist across restarts when using Oracle.
+                    config.UseMemoryStorage();
                     break;
 
                 default:

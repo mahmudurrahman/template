@@ -30,6 +30,11 @@ public sealed class TenantDbContextFactory : IDesignTimeDbContextFactory<TenantD
                     connectionString,
                     b => b.MigrationsAssembly(migrationsAssembly));
                 break;
+            case "ORACLE":
+                optionsBuilder.UseOracle(
+                    connectionString,
+                    b => b.MigrationsAssembly(migrationsAssembly));
+                break;
             default:
                 throw new NotSupportedException($"Database provider '{provider}' is not supported for TenantDbContext migrations.");
         }

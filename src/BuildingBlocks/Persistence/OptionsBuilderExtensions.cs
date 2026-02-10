@@ -50,6 +50,13 @@ public static class OptionsBuilderExtensions
                 });
                 break;
 
+            case DbProviders.Oracle:
+                builder.UseOracle(connectionString, e =>
+                {
+                    e.MigrationsAssembly(migrationsAssembly);
+                });
+                break;
+
             default:
                 throw new InvalidOperationException(
                     $"Database Provider {dbProvider} is not supported.");

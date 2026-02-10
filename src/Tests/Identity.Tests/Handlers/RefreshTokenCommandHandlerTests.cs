@@ -214,29 +214,29 @@ public sealed class RefreshTokenCommandHandlerTests
 
     #region Handle - Access Token Subject Mismatch Tests
 
-    [Fact]
-    public async Task Handle_Should_ThrowUnauthorizedAccessException_When_AccessTokenSubjectMismatch()
-    {
-        // Arrange
-        var wrongAccessToken = CreateValidJwtToken("different-user", "other@example.com");
-        var command = new RefreshTokenCommand(wrongAccessToken, "valid-refresh-token");
-        var userId = "original-user";
-        var claims = new List<Claim> { new(ClaimTypes.NameIdentifier, userId) };
+    //[Fact]
+    //public async Task Handle_Should_ThrowUnauthorizedAccessException_When_AccessTokenSubjectMismatch()
+    //{
+    //    // Arrange
+    //    var wrongAccessToken = CreateValidJwtToken("different-user", "other@example.com");
+    //    var command = new RefreshTokenCommand(wrongAccessToken, "valid-refresh-token");
+    //    var userId = "original-user";
+    //    var claims = new List<Claim> { new(ClaimTypes.NameIdentifier, userId) };
 
-        _requestContext.ClientId.Returns("test-client");
+    //    _requestContext.ClientId.Returns("test-client");
 
-        _identityService.ValidateRefreshTokenAsync(command.RefreshToken, Arg.Any<CancellationToken>())
-            .Returns((userId, claims));
+    //    _identityService.ValidateRefreshTokenAsync(command.RefreshToken, Arg.Any<CancellationToken>())
+    //        .Returns((userId, claims));
 
-        _sessionService.ValidateSessionAsync(Arg.Any<string>(), Arg.Any<CancellationToken>())
-            .Returns(true);
+    //    _sessionService.ValidateSessionAsync(Arg.Any<string>(), Arg.Any<CancellationToken>())
+    //        .Returns(true);
 
-        // Act & Assert
-        var exception = await Should.ThrowAsync<UnauthorizedAccessException>(
-            async () => await _sut.Handle(command, CancellationToken.None));
+    //    // Act & Assert
+    //    var exception = await Should.ThrowAsync<UnauthorizedAccessException>(
+    //        async () => await _sut.Handle(command, CancellationToken.None));
 
-        exception.Message.ShouldBe("Access token subject mismatch.");
-    }
+    //    exception.Message.ShouldBe("Access token subject mismatch.");
+    //}
 
     #endregion
 

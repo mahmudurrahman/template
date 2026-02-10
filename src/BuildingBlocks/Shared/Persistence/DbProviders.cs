@@ -14,4 +14,9 @@ public static class DbProviders
     /// Microsoft SQL Server (MSSQL) database provider.
     /// </summary>
     public const string MSSQL = "MSSQL";
+
+    /// <summary>
+    /// Oracle database provider.
+    /// </summary>
+    public const string Oracle = "ORACLE";
 }

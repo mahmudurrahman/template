@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(ls:*)",
-      "Bash(xargs:*)"
+      "Bash(xargs:*)",
+      "Bash(dotnet build:*)",
+      "Bash(dotnet ef migrations add:*)",
+      "Bash(set:*)",
+      "Bash(set \"DatabaseOptions__ConnectionString=User Id=fsh;Password=fsh;Data Source=localhost:1521/FREEPDB1\")",
+      "Bash(set \"DatabaseOptions__MigrationsAssembly=FSH.Playground.Migrations.Oracle\")"
     ]
   }
 }
