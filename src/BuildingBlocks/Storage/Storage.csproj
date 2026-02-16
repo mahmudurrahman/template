@@ -1,10 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<RootNamespace>FSH.Framework.Storage</RootNamespace>
-		<AssemblyName>FSH.Framework.Storage</AssemblyName>
-		<PackageId>FullStackHero.Framework.Storage</PackageId>
+		<RootNamespace>ERA.Framework.Storage</RootNamespace>
+		<AssemblyName>ERA.Framework.Storage</AssemblyName>
+		<PackageId>ERA.Framework.Storage</PackageId>
 		<NoWarn>$(NoWarn);CA1031;CA1056;CA1002;CA2227;CA1812;CA1308;CA1062</NoWarn>
+		<Version>10.0.0</Version>
+		<Authors>Mahmudur Rahman</Authors>
+		<Company>ERA Info Tech</Company>
+		<Description>A production-ready modular .NET framework for building enterprise applications</Description>
+		<PackageProjectUrl />
+		<RepositoryUrl />
+		<PackageTags>Modular;CQRS;VerticalSlice;DotNet;CleanArchitecture</PackageTags>
 	</PropertyGroup>
 	
 	<ItemGroup>

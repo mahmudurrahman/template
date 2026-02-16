@@ -1,10 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<RootNamespace>FSH.Framework.Persistence</RootNamespace>
-		<AssemblyName>FSH.Framework.Persistence</AssemblyName>
+		<RootNamespace>ERA.Framework.Persistence</RootNamespace>
+		<AssemblyName>ERA.Framework.Persistence</AssemblyName>
 		<PackageId>FullStackHero.Framework.Persistence</PackageId>
 		<NoWarn>$(NoWarn);S4144;CS0618</NoWarn>
+		<Version>10.0.0</Version>
+		<Authors>Mahmudur Rahman</Authors>
+		<Company>ERA Info Tech</Company>
+		<Description> A production-ready modular .NET framework for building enterprise applications</Description>
+		<PackageProjectUrl />
+		<RepositoryUrl />
+		<PackageTags>Modular;CQRS;VerticalSlice;DotNet;CleanArchitecture</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>

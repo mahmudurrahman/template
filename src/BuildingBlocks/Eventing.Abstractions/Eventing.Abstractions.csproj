@@ -4,11 +4,17 @@
 		<TargetFramework>net10.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<RootNamespace>FSH.Framework.Eventing.Abstractions</RootNamespace>
-		<AssemblyName>FSH.Framework.Eventing.Abstractions</AssemblyName>
-		<PackageId>FullStackHero.Framework.Eventing.Abstractions</PackageId>
+		<RootNamespace>ERA.Framework.Eventing.Abstractions</RootNamespace>
+		<AssemblyName>ERA.Framework.Eventing.Abstractions</AssemblyName>
+		<PackageId>ERA.Framework.Eventing.Abstractions</PackageId>
 		<Description>Lightweight abstractions for FSH eventing - interfaces only, no implementation dependencies</Description>
 		<NoWarn>$(NoWarn);CA1711;CA1716</NoWarn>
+		<Version>10.0.0</Version>
+		<Authors>Mahmudur Rahman</Authors>
+		<Company>ERA Info Tech</Company>
+		<PackageProjectUrl />
+		<RepositoryUrl />
+		<PackageTags>Modular;CQRS;VerticalSlice;DotNet;CleanArchitecture</PackageTags>
 	</PropertyGroup>
 
 </Project>

@@ -4,10 +4,17 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>FSH.Framework.Eventing</RootNamespace>
-    <AssemblyName>FSH.Framework.Eventing</AssemblyName>
+    <RootNamespace>ERA.Framework.Eventing</RootNamespace>
+    <AssemblyName>ERA.Framework.Eventing</AssemblyName>
     <PackageId>FullStackHero.Framework.Eventing</PackageId>
     <NoWarn>$(NoWarn);CA1711;CA1716;CA1031;S2139;S1066</NoWarn>
+    <Version>10.0.0</Version>
+    <Authors>Mahmudur Rahman</Authors>
+    <Company>ERA Info Tech</Company>
+    <Description>A production-ready modular .NET framework for building enterprise applications</Description>
+    <PackageProjectUrl />
+    <RepositoryUrl />
+    <PackageTags>Modular;CQRS;VerticalSlice;DotNet;CleanArchitecture</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

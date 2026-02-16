@@ -11,6 +11,13 @@
     <Project Path="BuildingBlocks/Storage/Storage.csproj" />
     <Project Path="BuildingBlocks/Web/Web.csproj" />
   </Folder>
+  <Folder Name="/Host/">
+    <Project Path="Playground/Playground.Api/Host.Api.csproj" Id="187ce245-0a57-469c-96c2-a88902f2d40d" />
+  </Folder>
+  <Folder Name="/Host/Migrations/">
+    <Project Path="Playground/Migrations.Oracle/Migrations.Oracle.csproj" />
+    <Project Path="Playground/Migrations.PostgreSQL/Migrations.PostgreSQL.csproj" Id="2c21903e-5dfa-47e0-82d9-1a0bd627fcbd" />
+  </Folder>
   <Folder Name="/Modules/" />
   <Folder Name="/Modules/Auditing/">
     <Project Path="Modules/Auditing/Modules.Auditing.Contracts/Modules.Auditing.Contracts.csproj" />
@@ -23,13 +30,6 @@
   <Folder Name="/Modules/Multitenancy/">
     <Project Path="Modules/Multitenancy/Modules.Multitenancy.Contracts/Modules.Multitenancy.Contracts.csproj" Id="61165a24-94b0-402c-9d9f-345898ce79c4" />
     <Project Path="Modules/Multitenancy/Modules.Multitenancy/Modules.Multitenancy.csproj" Id="69bca64d-0cf5-4236-8da6-1d775aa2a1cc" />
-  </Folder>
-  <Folder Name="/Playground/">
-    <Project Path="Playground/Playground.Api/Playground.Api.csproj" Id="187ce245-0a57-469c-96c2-a88902f2d40d" />
-  </Folder>
-  <Folder Name="/Playground/Migrations/">
-    <Project Path="Playground/Migrations.PostgreSQL/Migrations.PostgreSQL.csproj" Id="2c21903e-5dfa-47e0-82d9-1a0bd627fcbd" />
-    <Project Path="Playground/Migrations.Oracle/Migrations.Oracle.csproj" />
   </Folder>
   <Folder Name="/Tests/">
     <Project Path="Tests/Architecture.Tests/Architecture.Tests.csproj" />

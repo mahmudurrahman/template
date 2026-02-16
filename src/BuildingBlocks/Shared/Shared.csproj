@@ -1,10 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<RootNamespace>FSH.Framework.Shared</RootNamespace>
-		<AssemblyName>FSH.Framework.Shared</AssemblyName>
-		<PackageId>FullStackHero.Framework.Shared</PackageId>
+		<RootNamespace>ERA.Framework.Shared</RootNamespace>
+		<AssemblyName>ERA.Framework.Shared</AssemblyName>
+		<PackageId>ERA.Framework.Shared</PackageId>
 		<NoWarn>$(NoWarn);CA1716;CA1711;CA1019;CA1305;CA1002;CA2227</NoWarn>
+		<Version>10.0.0</Version>
+		<Authors>Mahmudur Rahman</Authors>
+		<Company>ERA Info Tech</Company>
+		<Description>A production-ready modular .NET framework for building enterprise applications</Description>
+		<PackageProjectUrl />
+		<RepositoryUrl />
+		<PackageTags>Modular;CQRS;VerticalSlice;DotNet;CleanArchitecture</PackageTags>
 	</PropertyGroup>
 	<ItemGroup>
 	  <FrameworkReference Include="Microsoft.AspNetCore.App" />

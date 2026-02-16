@@ -1,9 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<RootNamespace>FSH.Framework.Mailing</RootNamespace>
-		<AssemblyName>FSH.Framework.Mailing</AssemblyName>
-		<PackageId>FullStackHero.Framework.Mailing</PackageId>
+		<RootNamespace>ERA.Framework.Mailing</RootNamespace>
+		<AssemblyName>ERA.Framework.Mailing</AssemblyName>
+		<PackageId>ERA.Framework.Mailing</PackageId>
+		<Authors>Mahmudur Rahman</Authors>
+		<Company>ERA Info Tech</Company>
+		<Description>A production-ready modular .NET framework for building enterprise applications</Description>
+		<PackageProjectUrl />
+		<RepositoryUrl />
+		<PackageTags>Modular;CQRS;VerticalSlice;DotNet;CleanArchitecture</PackageTags>
 	</PropertyGroup>
 	
 	<ItemGroup>

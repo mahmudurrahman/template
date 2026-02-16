@@ -1,10 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<RootNamespace>FSH.Framework.Jobs</RootNamespace>
-		<AssemblyName>FSH.Framework.Jobs</AssemblyName>
-		<PackageId>FullStackHero.Framework.Jobs</PackageId>
+		<RootNamespace>ERA.Framework.Jobs</RootNamespace>
+		<AssemblyName>ERA.Framework.Jobs</AssemblyName>
+		<PackageId>ERA.Framework.Jobs</PackageId>
 		<NoWarn>$(NoWarn);CA1031;S3376;S3993</NoWarn>
+		<Version>10.0.0</Version>
+		<Authors>Mahmudur Rahman</Authors>
+		<Company>ERA Info Tech</Company>
+		<Description>A production-ready modular .NET framework for building enterprise applications</Description>
+		<PackageProjectUrl />
+		<RepositoryUrl />
+		<PackageTags>Modular;CQRS;VerticalSlice;DotNet;CleanArchitecture</PackageTags>
 	</PropertyGroup>
 	
 	<ItemGroup>

@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
-		<RootNamespace>FSH.Playground.Api</RootNamespace>
-		<AssemblyName>FSH.Playground.Api</AssemblyName>
+		<RootNamespace>ERA.Host.Api</RootNamespace>
+		<AssemblyName>ERA.Host.Api</AssemblyName>
 		<IsPackable>false</IsPackable>
 
 		<!-- Container configuration -->
@@ -10,6 +10,13 @@
 		<ContainerUser>root</ContainerUser>
 		<ContainerRepository>fsh-playground-api</ContainerRepository>
     	<PublishProfile>DefaultContainer</PublishProfile>
+    	<Version>10.0.0</Version>
+    	<Authors>Mahmudur Rahman</Authors>
+    	<Company>ERA Info Tech</Company>
+    	<Description>A production-ready modular .NET framework for building enterprise applications.</Description>
+    	<PackageProjectUrl />
+    	<RepositoryUrl />
+    	<PackageTags>Modular;CQRS;VerticalSlice;DotNet;CleanArchitecture</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>

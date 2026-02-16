@@ -1,9 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<RootNamespace>FSH.Modules.Multitenancy</RootNamespace>
-		<AssemblyName>FSH.Modules.Multitenancy</AssemblyName>
-		<PackageId>FullStackHero.Modules.Multitenancy</PackageId>
+		<RootNamespace>ERA.Modules.Multitenancy</RootNamespace>
+		<AssemblyName>ERA.Modules.Multitenancy</AssemblyName>
+		<PackageId>ERA.Modules.Multitenancy</PackageId>
 		<NoWarn>$(NoWarn);CA1031;CA1056;CA1008;CA1716;CA1812;S1135;S2139;S6667;S3267;S1172</NoWarn>
+		<Version>10.0.0</Version>
+		<Authors>Mahmudur Rahman</Authors>
+		<Company>ERA Info Tech</Company>
+		<Description>A production-ready modular .NET framework for building enterprise applications</Description>
+		<PackageProjectUrl />
+		<RepositoryUrl />
+		<PackageTags>Modular;CQRS;VerticalSlice;DotNet;CleanArchitecture</PackageTags>
 	</PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Finbuckle.MultiTenant" />

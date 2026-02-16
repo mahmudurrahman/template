@@ -1,10 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<RootNamespace>FSH.Modules.Auditing</RootNamespace>
-		<AssemblyName>FSH.Modules.Auditing</AssemblyName>
-		<PackageId>FullStackHero.Modules.Auditing</PackageId>
+		<RootNamespace>ERA.Modules.Auditing</RootNamespace>
+		<AssemblyName>ERA.Modules.Auditing</AssemblyName>
+		<PackageId>ERA.Modules.Auditing</PackageId>
 		<NoWarn>$(NoWarn);CA1031;CA1812;CA1859;S3267</NoWarn>
+		<Version>10.0.0</Version>
+		<Authors>Mahmudur Rahman</Authors>
+		<Company>ERA Info Tech</Company>
+		<Description>A production-ready modular .NET framework for building enterprise applications</Description>
+		<PackageProjectUrl />
+		<RepositoryUrl />
+		<PackageTags>Modular;CQRS;VerticalSlice;DotNet;CleanArchitecture</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>
