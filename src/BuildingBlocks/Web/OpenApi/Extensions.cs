@@ -67,7 +67,7 @@ public static class Extensions
         {
             var configuration = app.Configuration;
             options
-                .WithTitle(configuration["OpenApi:Title"] ?? "FSH API")
+                .WithTitle(configuration["OpenApi:Title"] ?? "E-TF API")
                 .WithTheme(Scalar.AspNetCore.ScalarTheme.Alternate)
                 .EnableDarkMode()
                 .HideModels()

@@ -35,8 +35,7 @@ public sealed class DatabaseOptionsStartupLogger : IHostedService
     {
         var options = _options.Value;
         _logger.LogInformation("current db provider: {Provider}", options.Provider);
-        _logger.LogInformation("for docs: https://www.fullstackhero.net");
-        _logger.LogInformation("sponsor: https://opencollective.com/fullstackhero");
+        _logger.LogInformation("era tf core");
         return Task.CompletedTask;
     }
 
