@@ -1,4 +1,5 @@
-﻿using ERA.Framework.Shared.Persistence;
+﻿using ERA.Framework.Persistence.Interceptors;
+using ERA.Framework.Shared.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
@@ -55,6 +56,7 @@ public static class OptionsBuilderExtensions
                 {
                     e.MigrationsAssembly(migrationsAssembly);
                 });
+                builder.AddInterceptors(new OracleBooleanInterceptor());
                 break;
 
             default:
