@@ -1,11 +1,10 @@
-# FullStackHero .NET 10 Starter Kit
+# NET 10 Starter Kit
 
 An opinionated, production-first starter for building multi-tenant SaaS and enterprise APIs on .NET 10. You get ready-to-ship Identity, Multitenancy, Auditing, caching, mailing, jobs, storage, health, OpenAPI, and OpenTelemetry—wired through Minimal APIs, Mediator, and EF Core.
 
 ## Why teams pick this
 - Modular vertical slices: drop `Modules.Identity`, `Modules.Multitenancy`, `Modules.Auditing` into any API and let the module loader wire endpoints.
 - Battle-tested building blocks: persistence + specifications, distributed caching, mailing, jobs via Hangfire, storage abstractions, and web host primitives (auth, rate limiting, versioning, CORS, exception handling).
-- Cloud-ready out of the box: Aspire AppHost spins up Postgres + Redis + the Playground API/Blazor with OTLP tracing enabled.
 - Multi-tenant from day one: Finbuckle-powered tenancy across Identity and your module DbContexts; helpers to migrate and seed tenant databases on startup.
 - Observability baked in: OpenTelemetry traces/metrics/logs, structured logging, health checks, and security/exception auditing.
 
@@ -19,17 +18,14 @@ An opinionated, production-first starter for building multi-tenant SaaS and ente
 ## Repository map
 - `src/BuildingBlocks` — Core abstractions (DDD primitives, exceptions), Persistence, Caching, Mailing, Jobs, Storage, Web host wiring.
 - `src/Modules` — `Identity`, `Multitenancy`, `Auditing` runtime + contracts projects.
-- `src/Playground` — Reference host (`Playground.Api`), Aspire app host (`FSH.Playground.AppHost`), Blazor UI, Postgres migrations.
+- `src/Host` — Reference host (`Host.Api`), Postgres and Oracle migrations.
 - `src/Tests` — Architecture tests that enforce layering and module boundaries.
 - `docs/framework` — Deep dives on architecture, modules, and developer recipes.
-- `terraform` — Infra as code scaffolding (optional starting point).
 
 ## Run it now (Aspire)
-Prereqs: .NET 10 SDK, Aspire workload, Docker running (for Postgres/Redis).
+Prereqs: .NET 10 SDK, Aspire workload, Docker running (for Postgres/Oracle/Redis).
 
-1. Restore: `dotnet restore src/FSH.Framework.slnx`
-2. Start everything: `dotnet run --project src/Playground/FSH.Playground.AppHost`
-   - Aspire brings up Postgres + Redis containers, wires env vars, launches the Playground API and Blazor front end, and enables OTLP export on https://localhost:4317.
+1. Restore: `dotnet restore src/ERA.TradeFinance.slnx`
 3. Hit the API: `https://localhost:5285` (Swagger/Scalar and module endpoints under `/api/v1/...`).
 
 ### Run the API only
@@ -52,7 +48,7 @@ Prereqs: .NET 10 SDK, Aspire workload, Docker running (for Postgres/Redis).
 
 ## Development notes
 - Target framework: `net10.0`; nullable enabled; analyzers on.
-- Tests: `dotnet test src/FSH.Framework.slnx` (includes architecture guardrails).
-- Want the deeper story? Start with `docs/framework/architecture.md` and the developer cookbook in `docs/framework/developer-cookbook.md`.
+- Tests: `dotnet test src/ERA.TradeFinance.slnx` (includes architecture guardrails).
+- Want the deeper story? Start with `docs/framework/architecture.md`
 
 Built and maintained by Mukesh Murugan for teams that want to ship faster without sacrificing architecture discipline.

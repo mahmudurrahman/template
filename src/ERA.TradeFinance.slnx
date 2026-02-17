@@ -12,11 +12,11 @@
     <Project Path="BuildingBlocks/Web/Web.csproj" />
   </Folder>
   <Folder Name="/Host/">
-    <Project Path="Playground/Playground.Api/Host.Api.csproj" Id="187ce245-0a57-469c-96c2-a88902f2d40d" />
+    <Project Path="Host/Host.Api/Host.Api.csproj" />
   </Folder>
   <Folder Name="/Host/Migrations/">
-    <Project Path="Playground/Migrations.Oracle/Migrations.Oracle.csproj" />
-    <Project Path="Playground/Migrations.PostgreSQL/Migrations.PostgreSQL.csproj" Id="2c21903e-5dfa-47e0-82d9-1a0bd627fcbd" />
+    <Project Path="Host/Migrations.Oracle/Migrations.Oracle.csproj" />
+    <Project Path="Host/Migrations.PostgreSQL/Migrations.PostgreSQL.csproj" />
   </Folder>
   <Folder Name="/Modules/" />
   <Folder Name="/Modules/Auditing/">
@@ -32,6 +32,7 @@
     <Project Path="Modules/Multitenancy/Modules.Multitenancy/Modules.Multitenancy.csproj" Id="69bca64d-0cf5-4236-8da6-1d775aa2a1cc" />
   </Folder>
   <Folder Name="/Tests/">
+    <File Path="Tests/README.md" />
     <Project Path="Tests/Architecture.Tests/Architecture.Tests.csproj" />
     <Project Path="Tests/Auditing.Tests/Auditing.Tests.csproj" />
     <Project Path="Tests/Generic.Tests/Generic.Tests.csproj" />
@@ -41,7 +42,6 @@
   <Folder Name="/Solution Items/">
     <File Path="../.gitignore" />
     <File Path=".editorconfig" />
-    <File Path="Architecture.md" />
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
   </Folder>

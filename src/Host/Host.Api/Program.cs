@@ -63,7 +63,7 @@ app.UseHeroPlatform(p =>
     p.ServeStaticFiles = true;
 });
 
-app.MapGet("/", () => Results.Ok(new { message = "hello world!" }))
-   .WithTags("PlayGround")
+app.MapGet("/", () => Results.Ok(new { message = "hello trade finance!" }))
+   .WithTags("Host")
    .AllowAnonymous();
 await app.RunAsync();
