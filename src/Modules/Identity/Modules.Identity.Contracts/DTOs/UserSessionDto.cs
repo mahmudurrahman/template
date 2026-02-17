@@ -1,4 +1,4 @@
-namespace FSH.Modules.Identity.Contracts.DTOs;
+namespace ERA.Modules.Identity.Contracts.DTOs;
 
 public class UserSessionDto
 {

@@ -1,10 +1,10 @@
-using FSH.Framework.Persistence;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Multitenancy.Contracts.Dtos;
-using FSH.Modules.Multitenancy.Contracts.v1.GetTenants;
+using ERA.Framework.Persistence;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Multitenancy.Contracts.Dtos;
+using ERA.Modules.Multitenancy.Contracts.v1.GetTenants;
 using System.Linq.Expressions;
 
-namespace FSH.Modules.Multitenancy.Features.v1.GetTenants;
+namespace ERA.Modules.Multitenancy.Features.v1.GetTenants;
 
 internal sealed class GetTenantsSpecification : Specification<AppTenantInfo, TenantDto>
 {

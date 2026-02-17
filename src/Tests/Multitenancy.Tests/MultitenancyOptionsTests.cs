@@ -1,4 +1,4 @@
-using FSH.Modules.Multitenancy;
+using ERA.Modules.Multitenancy;
 
 namespace Multitenancy.Tests;
 

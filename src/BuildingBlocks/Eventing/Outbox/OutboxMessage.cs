@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FSH.Framework.Eventing.Outbox;
+namespace ERA.Framework.Eventing.Outbox;
 
 /// <summary>
 /// Outbox message entity used to persist integration events alongside domain changes.

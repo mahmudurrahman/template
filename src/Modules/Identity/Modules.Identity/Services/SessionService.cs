@@ -1,15 +1,15 @@
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Core.Context;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Identity.Contracts.DTOs;
-using FSH.Modules.Identity.Contracts.Services;
-using FSH.Modules.Identity.Data;
-using FSH.Modules.Identity.Domain;
+using ERA.Framework.Core.Context;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Identity.Contracts.DTOs;
+using ERA.Modules.Identity.Contracts.Services;
+using ERA.Modules.Identity.Data;
+using ERA.Modules.Identity.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using UAParser;
 
-namespace FSH.Modules.Identity.Services;
+namespace ERA.Modules.Identity.Services;
 
 public sealed class SessionService : ISessionService
 {

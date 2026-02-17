@@ -1,6 +1,6 @@
-﻿using FSH.Framework.Web.Modules;
+﻿using ERA.Framework.Web.Modules;
 
-namespace FSH.Modules.Identity;
+namespace ERA.Modules.Identity;
 
 public sealed class IdentityModuleConstants : IModuleConstants
 {

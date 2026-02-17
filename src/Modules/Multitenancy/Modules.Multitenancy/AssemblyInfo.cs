@@ -1,3 +1,3 @@
-using FSH.Framework.Web.Modules;
+using ERA.Framework.Web.Modules;
 
-[assembly: FshModule(typeof(FSH.Modules.Multitenancy.MultitenancyModule), 200)]
+[assembly: FshModule(typeof(ERA.Modules.Multitenancy.MultitenancyModule), 200)]

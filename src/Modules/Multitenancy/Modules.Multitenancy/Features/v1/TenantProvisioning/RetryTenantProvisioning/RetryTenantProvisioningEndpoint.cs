@@ -1,13 +1,13 @@
-using FSH.Framework.Shared.Identity.Authorization;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Multitenancy.Contracts.v1.TenantProvisioning;
+using ERA.Framework.Shared.Identity.Authorization;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Multitenancy.Contracts.v1.TenantProvisioning;
 using Mediator;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 
-namespace FSH.Modules.Multitenancy.Features.v1.TenantProvisioning.RetryTenantProvisioning;
+namespace ERA.Modules.Multitenancy.Features.v1.TenantProvisioning.RetryTenantProvisioning;
 
 public static class RetryTenantProvisioningEndpoint
 {

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
 
-namespace FSH.Framework.Persistence;
+namespace ERA.Framework.Persistence;
 
 /// <summary>
 /// Extension methods for Entity Framework ModelBuilder configuration.

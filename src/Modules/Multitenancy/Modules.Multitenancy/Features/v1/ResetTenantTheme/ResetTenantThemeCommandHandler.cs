@@ -1,10 +1,10 @@
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Multitenancy.Contracts;
-using FSH.Modules.Multitenancy.Contracts.v1.ResetTenantTheme;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Multitenancy.Contracts;
+using ERA.Modules.Multitenancy.Contracts.v1.ResetTenantTheme;
 using Mediator;
 
-namespace FSH.Modules.Multitenancy.Features.v1.ResetTenantTheme;
+namespace ERA.Modules.Multitenancy.Features.v1.ResetTenantTheme;
 
 public sealed class ResetTenantThemeCommandHandler(
     ITenantThemeService themeService,

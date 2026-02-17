@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using FSH.Modules.Multitenancy.Contracts.v1.UpgradeTenant;
+using ERA.Modules.Multitenancy.Contracts.v1.UpgradeTenant;
 
-namespace FSH.Modules.Multitenancy.Features.v1.UpgradeTenant;
+namespace ERA.Modules.Multitenancy.Features.v1.UpgradeTenant;
 
 public sealed class UpgradeTenantCommandValidator : AbstractValidator<UpgradeTenantCommand>
 {

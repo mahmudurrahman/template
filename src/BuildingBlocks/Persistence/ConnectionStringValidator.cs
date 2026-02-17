@@ -1,11 +1,11 @@
-﻿using FSH.Framework.Shared.Persistence;
+﻿using ERA.Framework.Shared.Persistence;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Npgsql;
 using Oracle.ManagedDataAccess.Client;
 
-namespace FSH.Framework.Persistence;
+namespace ERA.Framework.Persistence;
 
 /// <summary>
 /// Validates database connection strings for supported providers (PostgreSQL, SQL Server).

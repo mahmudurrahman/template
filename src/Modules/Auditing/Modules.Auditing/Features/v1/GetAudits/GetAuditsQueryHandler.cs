@@ -1,13 +1,13 @@
-using FSH.Framework.Persistence;
-using FSH.Framework.Shared.Persistence;
-using FSH.Modules.Auditing.Contracts;
-using FSH.Modules.Auditing.Contracts.Dtos;
-using FSH.Modules.Auditing.Contracts.v1.GetAudits;
-using FSH.Modules.Auditing.Persistence;
+using ERA.Framework.Persistence;
+using ERA.Framework.Shared.Persistence;
+using ERA.Modules.Auditing.Contracts;
+using ERA.Modules.Auditing.Contracts.Dtos;
+using ERA.Modules.Auditing.Contracts.v1.GetAudits;
+using ERA.Modules.Auditing.Persistence;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.Modules.Auditing.Features.v1.GetAudits;
+namespace ERA.Modules.Auditing.Features.v1.GetAudits;
 
 public sealed class GetAuditsQueryHandler : IQueryHandler<GetAuditsQuery, PagedResponse<AuditSummaryDto>>
 {

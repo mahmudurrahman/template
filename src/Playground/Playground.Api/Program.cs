@@ -1,12 +1,12 @@
-﻿using FSH.Framework.Web;
-using FSH.Framework.Web.Modules;
-using FSH.Modules.Auditing;
-using FSH.Modules.Identity;
-using FSH.Modules.Identity.Contracts.v1.Tokens.TokenGeneration;
-using FSH.Modules.Identity.Features.v1.Tokens.TokenGeneration;
-using FSH.Modules.Multitenancy;
-using FSH.Modules.Multitenancy.Contracts.v1.GetTenantStatus;
-using FSH.Modules.Multitenancy.Features.v1.GetTenantStatus;
+﻿using ERA.Framework.Web;
+using ERA.Framework.Web.Modules;
+using ERA.Modules.Auditing;
+using ERA.Modules.Identity;
+using ERA.Modules.Identity.Contracts.v1.Tokens.TokenGeneration;
+using ERA.Modules.Identity.Features.v1.Tokens.TokenGeneration;
+using ERA.Modules.Multitenancy;
+using ERA.Modules.Multitenancy.Contracts.v1.GetTenantStatus;
+using ERA.Modules.Multitenancy.Features.v1.GetTenantStatus;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,8 +35,8 @@ builder.Services.AddMediator(o =>
         typeof(GenerateTokenCommandHandler),
         typeof(GetTenantStatusQuery),
         typeof(GetTenantStatusQueryHandler),
-        typeof(FSH.Modules.Auditing.Contracts.AuditEnvelope),
-        typeof(FSH.Modules.Auditing.Persistence.AuditDbContext)];
+        typeof(ERA.Modules.Auditing.Contracts.AuditEnvelope),
+        typeof(ERA.Modules.Auditing.Persistence.AuditDbContext)];
 });
 
 var moduleAssemblies = new Assembly[]

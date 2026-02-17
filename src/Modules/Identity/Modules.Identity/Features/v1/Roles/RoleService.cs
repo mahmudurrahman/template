@@ -1,16 +1,16 @@
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Core.Context;
-using FSH.Framework.Core.Exceptions;
-using FSH.Framework.Shared.Constants;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Identity.Contracts.DTOs;
-using FSH.Modules.Identity.Contracts.Services;
-using FSH.Modules.Identity.Data;
-using FSH.Modules.Identity.Domain;
+using ERA.Framework.Core.Context;
+using ERA.Framework.Core.Exceptions;
+using ERA.Framework.Shared.Constants;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Identity.Contracts.DTOs;
+using ERA.Modules.Identity.Contracts.Services;
+using ERA.Modules.Identity.Data;
+using ERA.Modules.Identity.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.Modules.Identity.Features.v1.Roles;
+namespace ERA.Modules.Identity.Features.v1.Roles;
 
 public class RoleService(RoleManager<FshRole> roleManager,
     IdentityDbContext context,

@@ -1,7 +1,7 @@
 using FluentValidation;
-using FSH.Modules.Identity.Contracts.v1.Tokens.RefreshToken;
+using ERA.Modules.Identity.Contracts.v1.Tokens.RefreshToken;
 
-namespace FSH.Modules.Identity.Features.v1.Tokens.RefreshToken;
+namespace ERA.Modules.Identity.Features.v1.Tokens.RefreshToken;
 
 public sealed class RefreshTokenCommandValidator : AbstractValidator<RefreshTokenCommand>
 {

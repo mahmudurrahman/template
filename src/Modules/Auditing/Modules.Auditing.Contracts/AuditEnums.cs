@@ -1,4 +1,4 @@
-﻿namespace FSH.Modules.Auditing.Contracts;
+﻿namespace ERA.Modules.Auditing.Contracts;
 
 /// <summary>
 /// High-level classification of audit events.

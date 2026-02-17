@@ -1,6 +1,6 @@
-using FSH.Framework.Eventing.Abstractions;
+using ERA.Framework.Eventing.Abstractions;
 
-namespace FSH.Framework.Eventing.Outbox;
+namespace ERA.Framework.Eventing.Outbox;
 
 /// <summary>
 /// Abstraction for persisting and reading outbox messages.

@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
-namespace FSH.Modules.Multitenancy.Data;
+namespace ERA.Modules.Multitenancy.Data;
 
 public sealed class TenantDbContextFactory : IDesignTimeDbContextFactory<TenantDbContext>
 {

@@ -1,6 +1,6 @@
-﻿using FSH.Framework.Core.Exceptions;
-using FSH.Framework.Jobs.Services;
-using FSH.Framework.Shared.Persistence;
+﻿using ERA.Framework.Core.Exceptions;
+using ERA.Framework.Jobs.Services;
+using ERA.Framework.Shared.Persistence;
 using Hangfire;
 using Hangfire.MemoryStorage;
 using Hangfire.PostgreSql;
@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Npgsql;
 
-namespace FSH.Framework.Jobs;
+namespace ERA.Framework.Jobs;
 
 public static class Extensions
 {

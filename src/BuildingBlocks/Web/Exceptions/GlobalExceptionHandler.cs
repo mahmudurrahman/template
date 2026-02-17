@@ -1,11 +1,11 @@
-﻿using FSH.Framework.Core.Exceptions;
+﻿using ERA.Framework.Core.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Serilog.Context;
 
-namespace FSH.Framework.Web.Exceptions;
+namespace ERA.Framework.Web.Exceptions;
 
 public class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger) : IExceptionHandler
 {

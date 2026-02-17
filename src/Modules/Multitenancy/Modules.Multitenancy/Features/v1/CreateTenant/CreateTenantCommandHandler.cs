@@ -1,9 +1,9 @@
-using FSH.Modules.Multitenancy.Contracts;
-using FSH.Modules.Multitenancy.Contracts.v1.CreateTenant;
-using FSH.Modules.Multitenancy.Provisioning;
+using ERA.Modules.Multitenancy.Contracts;
+using ERA.Modules.Multitenancy.Contracts.v1.CreateTenant;
+using ERA.Modules.Multitenancy.Provisioning;
 using Mediator;
 
-namespace FSH.Modules.Multitenancy.Features.v1.CreateTenant;
+namespace ERA.Modules.Multitenancy.Features.v1.CreateTenant;
 
 public sealed class CreateTenantCommandHandler(ITenantService tenantService, ITenantProvisioningService provisioningService)
     : ICommandHandler<CreateTenantCommand, CreateTenantCommandResponse>

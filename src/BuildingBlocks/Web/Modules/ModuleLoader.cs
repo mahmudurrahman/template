@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Hosting;
 using System.Reflection;
 
-namespace FSH.Framework.Web.Modules;
+namespace ERA.Framework.Web.Modules;
 
 public static class ModuleLoader
 {

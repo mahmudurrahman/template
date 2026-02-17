@@ -1,12 +1,12 @@
 using Amazon;
 using Amazon.S3;
-using FSH.Framework.Storage.Local;
-using FSH.Framework.Storage.S3;
-using FSH.Framework.Storage.Services;
+using ERA.Framework.Storage.Local;
+using ERA.Framework.Storage.S3;
+using ERA.Framework.Storage.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.Framework.Storage;
+namespace ERA.Framework.Storage;
 
 public static class Extensions
 {

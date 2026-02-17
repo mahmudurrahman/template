@@ -1,10 +1,10 @@
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Multitenancy.Contracts;
-using FSH.Modules.Multitenancy.Contracts.v1.UpdateTenantTheme;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Multitenancy.Contracts;
+using ERA.Modules.Multitenancy.Contracts.v1.UpdateTenantTheme;
 using Mediator;
 
-namespace FSH.Modules.Multitenancy.Features.v1.UpdateTenantTheme;
+namespace ERA.Modules.Multitenancy.Features.v1.UpdateTenantTheme;
 
 public sealed class UpdateTenantThemeCommandHandler(
     ITenantThemeService themeService,

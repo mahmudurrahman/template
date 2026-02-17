@@ -1,11 +1,11 @@
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Multitenancy.Data;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Multitenancy.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.Modules.Multitenancy.Provisioning;
+namespace ERA.Modules.Multitenancy.Provisioning;
 
 /// <summary>
 /// Initializes the tenant catalog database and seeds the root tenant on startup.

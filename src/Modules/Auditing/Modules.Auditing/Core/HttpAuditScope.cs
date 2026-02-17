@@ -1,11 +1,11 @@
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Auditing.Contracts;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Auditing.Contracts;
 using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
 using System.Security.Claims;
 
-namespace FSH.Modules.Auditing;
+namespace ERA.Modules.Auditing;
 
 public sealed class HttpAuditScope : IAuditScope
 {

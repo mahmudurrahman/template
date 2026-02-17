@@ -1,6 +1,6 @@
-using FSH.Modules.Auditing.Contracts;
-using FSH.Modules.Identity.Contracts;
-using FSH.Modules.Multitenancy.Contracts;
+using ERA.Modules.Auditing.Contracts;
+using ERA.Modules.Identity.Contracts;
+using ERA.Modules.Multitenancy.Contracts;
 using NetArchTest.Rules;
 using Shouldly;
 using System.Reflection;

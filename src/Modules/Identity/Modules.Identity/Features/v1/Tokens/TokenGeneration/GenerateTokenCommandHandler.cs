@@ -1,17 +1,17 @@
-using FSH.Framework.Core.Context;
-using FSH.Modules.Auditing.Contracts;
-using FSH.Modules.Identity.Contracts.DTOs;
-using FSH.Modules.Identity.Contracts.Services;
-using FSH.Modules.Identity.Contracts.v1.Tokens.TokenGeneration;
+using ERA.Framework.Core.Context;
+using ERA.Modules.Auditing.Contracts;
+using ERA.Modules.Identity.Contracts.DTOs;
+using ERA.Modules.Identity.Contracts.Services;
+using ERA.Modules.Identity.Contracts.v1.Tokens.TokenGeneration;
 using Mediator;
 using System.Security.Claims;
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Eventing.Outbox;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Identity.Contracts.Events;
+using ERA.Framework.Eventing.Outbox;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Identity.Contracts.Events;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.Modules.Identity.Features.v1.Tokens.TokenGeneration;
+namespace ERA.Modules.Identity.Features.v1.Tokens.TokenGeneration;
 
 public sealed class GenerateTokenCommandHandler
     : ICommandHandler<GenerateTokenCommand, TokenResponse>

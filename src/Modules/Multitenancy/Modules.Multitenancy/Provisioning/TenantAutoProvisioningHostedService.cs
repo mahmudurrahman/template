@@ -1,13 +1,13 @@
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Core.Exceptions;
-using FSH.Framework.Shared.Multitenancy;
+using ERA.Framework.Core.Exceptions;
+using ERA.Framework.Shared.Multitenancy;
 using Hangfire;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace FSH.Modules.Multitenancy.Provisioning;
+namespace ERA.Modules.Multitenancy.Provisioning;
 
 public sealed class TenantAutoProvisioningHostedService : IHostedService
 {

@@ -1,6 +1,6 @@
 using System;
 
-namespace FSH.Framework.Web.Modules;
+namespace ERA.Framework.Web.Modules;
 
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
 public sealed class FshModuleAttribute : Attribute

@@ -1,7 +1,7 @@
-using FSH.Modules.Identity.Contracts.Services;
-using FSH.Modules.Identity.Data;
-using FSH.Modules.Identity.Domain;
-using FSH.Modules.Identity.Services;
+using ERA.Modules.Identity.Contracts.Services;
+using ERA.Modules.Identity.Data;
+using ERA.Modules.Identity.Domain;
+using ERA.Modules.Identity.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using NSubstitute;

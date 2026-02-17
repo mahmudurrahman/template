@@ -1,8 +1,8 @@
 using FluentValidation;
-using FSH.Framework.Web.Validation;
-using FSH.Modules.Multitenancy.Contracts.v1.GetTenants;
+using ERA.Framework.Web.Validation;
+using ERA.Modules.Multitenancy.Contracts.v1.GetTenants;
 
-namespace FSH.Modules.Multitenancy.Features.v1.GetTenants;
+namespace ERA.Modules.Multitenancy.Features.v1.GetTenants;
 
 public sealed class GetTenantsQueryValidator : AbstractValidator<GetTenantsQuery>
 {

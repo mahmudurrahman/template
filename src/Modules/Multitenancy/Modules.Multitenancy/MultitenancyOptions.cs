@@ -1,4 +1,4 @@
-namespace FSH.Modules.Multitenancy;
+namespace ERA.Modules.Multitenancy;
 
 /// <summary>
 /// Options controlling multitenancy behavior at startup.

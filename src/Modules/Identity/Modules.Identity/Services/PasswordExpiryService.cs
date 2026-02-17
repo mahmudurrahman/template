@@ -1,11 +1,11 @@
-using FSH.Modules.Identity.Contracts.DTOs;
-using FSH.Modules.Identity.Contracts.Services;
-using FSH.Modules.Identity.Data;
-using FSH.Modules.Identity.Domain;
+using ERA.Modules.Identity.Contracts.DTOs;
+using ERA.Modules.Identity.Contracts.Services;
+using ERA.Modules.Identity.Data;
+using ERA.Modules.Identity.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 
-namespace FSH.Modules.Identity.Services;
+namespace ERA.Modules.Identity.Services;
 
 internal sealed class PasswordExpiryService : IPasswordExpiryService
 {

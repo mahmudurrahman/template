@@ -1,7 +1,7 @@
 using System.Text.Json;
-using FSH.Framework.Eventing.Abstractions;
+using ERA.Framework.Eventing.Abstractions;
 
-namespace FSH.Framework.Eventing.Serialization;
+namespace ERA.Framework.Eventing.Serialization;
 
 /// <summary>
 /// System.Text.Json-based event serializer.

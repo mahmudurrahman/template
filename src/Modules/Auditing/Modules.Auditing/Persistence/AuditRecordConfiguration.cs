@@ -2,7 +2,7 @@ using Finbuckle.MultiTenant.EntityFrameworkCore.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FSH.Modules.Auditing.Persistence;
+namespace ERA.Modules.Auditing.Persistence;
 
 public class AuditRecordConfiguration : IEntityTypeConfiguration<AuditRecord>
 {

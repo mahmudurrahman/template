@@ -1,4 +1,4 @@
-﻿using FSH.Framework.Shared.Persistence;
+﻿using ERA.Framework.Shared.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 
-namespace FSH.Framework.Persistence;
+namespace ERA.Framework.Persistence;
 
 /// <summary>
 /// Extension methods for configuring persistence services and database contexts.

@@ -1,9 +1,9 @@
-﻿using FSH.Framework.Core.Context;
-using FSH.Framework.Shared.Identity.Claims;
+﻿using ERA.Framework.Core.Context;
+using ERA.Framework.Shared.Identity.Claims;
 using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
 
-namespace FSH.Framework.Web.Auth;
+namespace ERA.Framework.Web.Auth;
 
 public class CurrentUserMiddleware(ICurrentUserInitializer currentUserInitializer) : IMiddleware
 {

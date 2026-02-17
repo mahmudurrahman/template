@@ -1,9 +1,9 @@
-using FSH.Modules.Auditing.Contracts;
+using ERA.Modules.Auditing.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics;
 
-namespace FSH.Modules.Auditing;
+namespace ERA.Modules.Auditing;
 
 public sealed class AuditHttpMiddleware
 {

@@ -1,13 +1,13 @@
-using FSH.Framework.Shared.Identity;
-using FSH.Framework.Shared.Identity.Authorization;
-using FSH.Modules.Identity.Contracts.v1.Users.AssignUserRoles;
+using ERA.Framework.Shared.Identity;
+using ERA.Framework.Shared.Identity.Authorization;
+using ERA.Modules.Identity.Contracts.v1.Users.AssignUserRoles;
 using Mediator;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Routing;
 
-namespace FSH.Modules.Identity.Features.v1.Users.AssignUserRoles;
+namespace ERA.Modules.Identity.Features.v1.Users.AssignUserRoles;
 
 public static class AssignUserRolesEndpoint
 {

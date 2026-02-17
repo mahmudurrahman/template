@@ -1,13 +1,13 @@
-using FSH.Framework.Shared.Identity.Authorization;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Multitenancy.Contracts.v1.UpgradeTenant;
+using ERA.Framework.Shared.Identity.Authorization;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Multitenancy.Contracts.v1.UpgradeTenant;
 using Mediator;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Routing;
 
-namespace FSH.Modules.Multitenancy.Features.v1.UpgradeTenant;
+namespace ERA.Modules.Multitenancy.Features.v1.UpgradeTenant;
 
 public static class UpgradeTenantEndpoint
 {

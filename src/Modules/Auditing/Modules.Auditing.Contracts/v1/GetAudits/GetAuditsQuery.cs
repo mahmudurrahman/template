@@ -1,9 +1,9 @@
-using FSH.Framework.Shared.Persistence;
-using FSH.Modules.Auditing.Contracts;
-using FSH.Modules.Auditing.Contracts.Dtos;
+using ERA.Framework.Shared.Persistence;
+using ERA.Modules.Auditing.Contracts;
+using ERA.Modules.Auditing.Contracts.Dtos;
 using Mediator;
 
-namespace FSH.Modules.Auditing.Contracts.v1.GetAudits;
+namespace ERA.Modules.Auditing.Contracts.v1.GetAudits;
 
 public sealed class GetAuditsQuery : IPagedQuery, IQuery<PagedResponse<AuditSummaryDto>>
 {

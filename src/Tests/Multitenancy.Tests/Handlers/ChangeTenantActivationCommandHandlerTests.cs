@@ -1,7 +1,7 @@
-using FSH.Modules.Multitenancy.Contracts;
-using FSH.Modules.Multitenancy.Contracts.Dtos;
-using FSH.Modules.Multitenancy.Contracts.v1.ChangeTenantActivation;
-using FSH.Modules.Multitenancy.Features.v1.ChangeTenantActivation;
+using ERA.Modules.Multitenancy.Contracts;
+using ERA.Modules.Multitenancy.Contracts.Dtos;
+using ERA.Modules.Multitenancy.Contracts.v1.ChangeTenantActivation;
+using ERA.Modules.Multitenancy.Features.v1.ChangeTenantActivation;
 using NSubstitute;
 
 namespace Multitenancy.Tests.Handlers;

@@ -1,10 +1,10 @@
-using FSH.Framework.Core.Exceptions;
-using FSH.Modules.Identity.Contracts.v1.Groups.RemoveUserFromGroup;
-using FSH.Modules.Identity.Data;
+using ERA.Framework.Core.Exceptions;
+using ERA.Modules.Identity.Contracts.v1.Groups.RemoveUserFromGroup;
+using ERA.Modules.Identity.Data;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.Modules.Identity.Features.v1.Groups.RemoveUserFromGroup;
+namespace ERA.Modules.Identity.Features.v1.Groups.RemoveUserFromGroup;
 
 public sealed class RemoveUserFromGroupCommandHandler : ICommandHandler<RemoveUserFromGroupCommand, Unit>
 {

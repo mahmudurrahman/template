@@ -1,7 +1,7 @@
-using FSH.Framework.Shared.Storage;
-using FSH.Framework.Storage.DTOs;
+using ERA.Framework.Shared.Storage;
+using ERA.Framework.Storage.DTOs;
 
-namespace FSH.Framework.Storage.Services;
+namespace ERA.Framework.Storage.Services;
 
 public interface IStorageService
 {

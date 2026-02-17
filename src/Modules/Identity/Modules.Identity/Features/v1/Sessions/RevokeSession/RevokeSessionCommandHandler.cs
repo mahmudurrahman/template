@@ -1,9 +1,9 @@
-using FSH.Framework.Core.Context;
-using FSH.Modules.Identity.Contracts.Services;
-using FSH.Modules.Identity.Contracts.v1.Sessions.RevokeSession;
+using ERA.Framework.Core.Context;
+using ERA.Modules.Identity.Contracts.Services;
+using ERA.Modules.Identity.Contracts.v1.Sessions.RevokeSession;
 using Mediator;
 
-namespace FSH.Modules.Identity.Features.v1.Sessions.RevokeSession;
+namespace ERA.Modules.Identity.Features.v1.Sessions.RevokeSession;
 
 public sealed class RevokeSessionCommandHandler : ICommandHandler<RevokeSessionCommand, bool>
 {

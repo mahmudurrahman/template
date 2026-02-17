@@ -1,17 +1,17 @@
 using Finbuckle.MultiTenant;
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Framework.Shared.Persistence;
-using FSH.Modules.Auditing.Persistence;
-using FSH.Modules.Identity.Data;
-using FSH.Modules.Multitenancy.Data;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Framework.Shared.Persistence;
+using ERA.Modules.Auditing.Persistence;
+using ERA.Modules.Identity.Data;
+using ERA.Modules.Multitenancy.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 
-namespace FSH.Playground.Migrations.Oracle;
+namespace ERA.Host.Migrations.Oracle;
 
 internal sealed class OracleTenantDbContextFactory : IDesignTimeDbContextFactory<TenantDbContext>
 {

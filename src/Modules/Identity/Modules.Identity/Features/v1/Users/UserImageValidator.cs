@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
-using FSH.Framework.Storage;
-using FSH.Framework.Shared.Storage;
+using ERA.Framework.Storage;
+using ERA.Framework.Shared.Storage;
 
-namespace FSH.Modules.Identity.Features.v1.Users;
+namespace ERA.Modules.Identity.Features.v1.Users;
 
 public sealed class UserImageValidator : AbstractValidator<FileUploadRequest>
 {

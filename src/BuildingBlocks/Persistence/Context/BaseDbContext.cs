@@ -1,13 +1,13 @@
 ﻿using Finbuckle.MultiTenant.Abstractions;
 using Finbuckle.MultiTenant.EntityFrameworkCore;
-using FSH.Framework.Core.Domain;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Framework.Shared.Persistence;
+using ERA.Framework.Core.Domain;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Framework.Shared.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 
-namespace FSH.Framework.Persistence.Context;
+namespace ERA.Framework.Persistence.Context;
 
 /// <summary>
 /// Base database context with multi-tenancy and soft delete support.

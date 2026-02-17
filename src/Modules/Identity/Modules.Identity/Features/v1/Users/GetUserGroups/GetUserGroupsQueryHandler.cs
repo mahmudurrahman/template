@@ -1,11 +1,11 @@
-using FSH.Framework.Core.Exceptions;
-using FSH.Modules.Identity.Contracts.DTOs;
-using FSH.Modules.Identity.Contracts.v1.Users.GetUserGroups;
-using FSH.Modules.Identity.Data;
+using ERA.Framework.Core.Exceptions;
+using ERA.Modules.Identity.Contracts.DTOs;
+using ERA.Modules.Identity.Contracts.v1.Users.GetUserGroups;
+using ERA.Modules.Identity.Data;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.Modules.Identity.Features.v1.Users.GetUserGroups;
+namespace ERA.Modules.Identity.Features.v1.Users.GetUserGroups;
 
 public sealed class GetUserGroupsQueryHandler : IQueryHandler<GetUserGroupsQuery, IEnumerable<GroupDto>>
 {

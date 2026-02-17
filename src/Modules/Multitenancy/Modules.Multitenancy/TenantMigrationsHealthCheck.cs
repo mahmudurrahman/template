@@ -1,12 +1,12 @@
 using Finbuckle.MultiTenant;
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Multitenancy.Data;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Multitenancy.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
-namespace FSH.Modules.Multitenancy;
+namespace ERA.Modules.Multitenancy;
 
 public sealed class TenantMigrationsHealthCheck : IHealthCheck
 {

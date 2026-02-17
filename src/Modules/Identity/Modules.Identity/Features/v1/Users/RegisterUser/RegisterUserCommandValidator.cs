@@ -1,7 +1,7 @@
 using FluentValidation;
-using FSH.Modules.Identity.Contracts.v1.Users.RegisterUser;
+using ERA.Modules.Identity.Contracts.v1.Users.RegisterUser;
 
-namespace FSH.Modules.Identity.Features.v1.Users.RegisterUser;
+namespace ERA.Modules.Identity.Features.v1.Users.RegisterUser;
 
 public sealed class RegisterUserCommandValidator : AbstractValidator<RegisterUserCommand>
 {

@@ -1,4 +1,4 @@
-namespace FSH.Framework.Caching;
+namespace ERA.Framework.Caching;
 
 /// <summary>
 /// Provides caching operations for storing and retrieving items from cache.

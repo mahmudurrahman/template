@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace FSH.Playground.Migrations.PostgreSQL.Identity
+namespace ERA.Host.Migrations.PostgreSQL.Identity
 {
     /// <inheritdoc />
     public partial class UserGroups : Migration

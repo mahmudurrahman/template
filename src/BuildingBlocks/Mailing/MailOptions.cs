@@ -1,4 +1,4 @@
-﻿namespace FSH.Framework.Mailing;
+﻿namespace ERA.Framework.Mailing;
 
 public class MailOptions
 {

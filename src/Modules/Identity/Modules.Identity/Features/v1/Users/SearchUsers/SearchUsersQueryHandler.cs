@@ -1,16 +1,16 @@
 using System.Linq.Expressions;
-using FSH.Framework.Core.Context;
-using FSH.Framework.Persistence;
-using FSH.Framework.Shared.Persistence;
-using FSH.Modules.Identity.Contracts.DTOs;
-using FSH.Modules.Identity.Contracts.v1.Users.SearchUsers;
-using FSH.Modules.Identity.Data;
-using FSH.Modules.Identity.Domain;
+using ERA.Framework.Core.Context;
+using ERA.Framework.Persistence;
+using ERA.Framework.Shared.Persistence;
+using ERA.Modules.Identity.Contracts.DTOs;
+using ERA.Modules.Identity.Contracts.v1.Users.SearchUsers;
+using ERA.Modules.Identity.Data;
+using ERA.Modules.Identity.Domain;
 using Mediator;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.Modules.Identity.Features.v1.Users.SearchUsers;
+namespace ERA.Modules.Identity.Features.v1.Users.SearchUsers;
 
 public sealed class SearchUsersQueryHandler : IQueryHandler<SearchUsersQuery, PagedResponse<UserDto>>
 {

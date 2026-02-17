@@ -1,6 +1,6 @@
-using FSH.Framework.Core.Domain;
+using ERA.Framework.Core.Domain;
 
-namespace FSH.Modules.Identity.Domain;
+namespace ERA.Modules.Identity.Domain;
 
 public class Group : ISoftDeletable
 {

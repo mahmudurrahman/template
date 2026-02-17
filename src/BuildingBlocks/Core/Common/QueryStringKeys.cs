@@ -1,4 +1,4 @@
-﻿namespace FSH.Framework.Core.Common;
+﻿namespace ERA.Framework.Core.Common;
 
 /// <summary>
 /// Constants for commonly used query string parameter names.

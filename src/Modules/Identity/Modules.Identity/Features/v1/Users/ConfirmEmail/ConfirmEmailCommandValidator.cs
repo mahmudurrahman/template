@@ -1,7 +1,7 @@
 using FluentValidation;
-using FSH.Modules.Identity.Contracts.v1.Users.ConfirmEmail;
+using ERA.Modules.Identity.Contracts.v1.Users.ConfirmEmail;
 
-namespace FSH.Modules.Identity.Features.v1.Users.ConfirmEmail;
+namespace ERA.Modules.Identity.Features.v1.Users.ConfirmEmail;
 
 public sealed class ConfirmEmailCommandValidator : AbstractValidator<ConfirmEmailCommand>
 {

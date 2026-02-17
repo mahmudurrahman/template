@@ -1,4 +1,4 @@
-namespace FSH.Framework.Storage.S3;
+namespace ERA.Framework.Storage.S3;
 
 public sealed class S3StorageOptions
 {

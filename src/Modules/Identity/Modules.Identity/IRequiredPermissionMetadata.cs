@@ -1,4 +1,4 @@
-﻿namespace FSH.Modules.Identity;
+﻿namespace ERA.Modules.Identity;
 
 public interface IRequiredPermissionMetadata
 {

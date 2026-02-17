@@ -1,10 +1,10 @@
-﻿using FSH.Framework.Core.Context;
-using FSH.Framework.Core.Exceptions;
-using FSH.Framework.Shared.Identity.Claims;
-using FSH.Modules.Identity.Contracts.Services;
+﻿using ERA.Framework.Core.Context;
+using ERA.Framework.Core.Exceptions;
+using ERA.Framework.Shared.Identity.Claims;
+using ERA.Modules.Identity.Contracts.Services;
 using System.Security.Claims;
 
-namespace FSH.Modules.Identity.Services;
+namespace ERA.Modules.Identity.Services;
 
 internal sealed class CurrentUserService : ICurrentUserService
 {

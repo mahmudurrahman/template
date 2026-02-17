@@ -1,4 +1,4 @@
-namespace FSH.Framework.Eventing.Abstractions;
+namespace ERA.Framework.Eventing.Abstractions;
 
 /// <summary>
 /// Handles a single integration event type.

@@ -1,6 +1,6 @@
-using FSH.Modules.Auditing.Contracts;
+using ERA.Modules.Auditing.Contracts;
 
-namespace FSH.Modules.Auditing.Contracts.Dtos;
+namespace ERA.Modules.Auditing.Contracts.Dtos;
 
 public sealed class AuditSummaryAggregateDto
 {

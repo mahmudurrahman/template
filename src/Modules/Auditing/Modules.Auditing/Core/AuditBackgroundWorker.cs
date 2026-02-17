@@ -1,9 +1,9 @@
 using System.Threading.Channels;
-using FSH.Modules.Auditing.Contracts;
+using ERA.Modules.Auditing.Contracts;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.Modules.Auditing;
+namespace ERA.Modules.Auditing;
 
 /// <summary>
 /// Drains the channel and writes to the configured sink in batches.

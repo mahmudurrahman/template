@@ -1,4 +1,4 @@
-namespace FSH.Framework.Shared.Identity;
+namespace ERA.Framework.Shared.Identity;
 
 public static class IdentityPermissionConstants
 {

@@ -1,4 +1,4 @@
-using FSH.Framework.Shared.Persistence;
+using ERA.Framework.Shared.Persistence;
 using Mediator;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -12,9 +12,9 @@ using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using System.Diagnostics;
-using static FSH.Framework.Web.Observability.OpenTelemetry.OpenTelemetryOptions;
+using static ERA.Framework.Web.Observability.OpenTelemetry.OpenTelemetryOptions;
 
-namespace FSH.Framework.Web.Observability.OpenTelemetry;
+namespace ERA.Framework.Web.Observability.OpenTelemetry;
 
 public static class Extensions
 {

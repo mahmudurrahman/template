@@ -1,9 +1,9 @@
 using Finbuckle.MultiTenant.EntityFrameworkCore.Extensions;
-using FSH.Modules.Identity.Domain;
+using ERA.Modules.Identity.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FSH.Modules.Identity.Data.Configurations;
+namespace ERA.Modules.Identity.Data.Configurations;
 
 public class GroupConfiguration : IEntityTypeConfiguration<Group>
 {

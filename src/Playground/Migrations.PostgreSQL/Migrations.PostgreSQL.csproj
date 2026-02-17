@@ -1,9 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<RootNamespace>FSH.Playground.Migrations.PostgreSQL</RootNamespace>
-		<AssemblyName>FSH.Playground.Migrations.PostgreSQL</AssemblyName>
+		<RootNamespace>ERA.Playground.Migrations.PostgreSQL</RootNamespace>
+		<AssemblyName>ERA.Host.Migrations.PostgreSQL</AssemblyName>
 		<IsPackable>false</IsPackable>
+		<Version>10.0.0</Version>
+		<Authors>Mahmudur Rahman</Authors>
+		<Company>ERA Info Tech</Company>
+		<Description>A production-ready modular .NET framework for building enterprise applications</Description>
+		<PackageProjectUrl />
+		<RepositoryUrl />
+		<PackageTags>Modular;CQRS;VerticalSlice;DotNet;CleanArchitecture</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>

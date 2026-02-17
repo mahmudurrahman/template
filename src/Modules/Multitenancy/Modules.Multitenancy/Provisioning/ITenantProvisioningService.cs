@@ -1,6 +1,6 @@
-using FSH.Modules.Multitenancy.Contracts.Dtos;
+using ERA.Modules.Multitenancy.Contracts.Dtos;
 
-namespace FSH.Modules.Multitenancy.Provisioning;
+namespace ERA.Modules.Multitenancy.Provisioning;
 
 public interface ITenantProvisioningService
 {

@@ -1,9 +1,9 @@
-using FSH.Framework.Eventing.Abstractions;
-using FSH.Framework.Mailing;
-using FSH.Framework.Mailing.Services;
-using FSH.Modules.Identity.Contracts.Events;
+using ERA.Framework.Eventing.Abstractions;
+using ERA.Framework.Mailing;
+using ERA.Framework.Mailing.Services;
+using ERA.Modules.Identity.Contracts.Events;
 
-namespace FSH.Modules.Identity.Events;
+namespace ERA.Modules.Identity.Events;
 
 /// <summary>
 /// Sends a welcome email when a new user registers.

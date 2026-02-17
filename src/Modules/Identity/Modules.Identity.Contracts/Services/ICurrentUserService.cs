@@ -1,7 +1,7 @@
 using System.Security.Claims;
-using FSH.Framework.Core.Context;
+using ERA.Framework.Core.Context;
 
-namespace FSH.Modules.Identity.Contracts.Services;
+namespace ERA.Modules.Identity.Contracts.Services;
 
 /// <summary>
 /// Service interface for managing the current user context.

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace FSH.Playground.Migrations.PostgreSQL.MultiTenancy
+namespace ERA.Host.Migrations.PostgreSQL.MultiTenancy
 {
     /// <inheritdoc />
     public partial class AddMultitenancy : Migration

@@ -4,7 +4,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Filters;
 
-namespace FSH.Framework.Web.Observability.Logging.Serilog;
+namespace ERA.Framework.Web.Observability.Logging.Serilog;
 
 public static class Extensions
 {

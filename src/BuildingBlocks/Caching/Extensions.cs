@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using StackExchange.Redis;
 
-namespace FSH.Framework.Caching;
+namespace ERA.Framework.Caching;
 
 /// <summary>
 /// Extension methods for registering caching services in the dependency injection container.

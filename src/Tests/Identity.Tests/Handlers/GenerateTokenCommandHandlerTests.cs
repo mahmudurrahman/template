@@ -1,12 +1,12 @@
 using AutoFixture;
-using FSH.Framework.Core.Context;
-using FSH.Framework.Eventing.Outbox;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Auditing.Contracts;
-using FSH.Modules.Identity.Contracts.DTOs;
-using FSH.Modules.Identity.Contracts.Services;
-using FSH.Modules.Identity.Contracts.v1.Tokens.TokenGeneration;
-using FSH.Modules.Identity.Features.v1.Tokens.TokenGeneration;
+using ERA.Framework.Core.Context;
+using ERA.Framework.Eventing.Outbox;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Auditing.Contracts;
+using ERA.Modules.Identity.Contracts.DTOs;
+using ERA.Modules.Identity.Contracts.Services;
+using ERA.Modules.Identity.Contracts.v1.Tokens.TokenGeneration;
+using ERA.Modules.Identity.Features.v1.Tokens.TokenGeneration;
 using Finbuckle.MultiTenant.Abstractions;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
@@ -128,7 +128,7 @@ public sealed class GenerateTokenCommandHandlerTests
         await _identityService.Received(1).StoreRefreshTokenAsync(userId, token.RefreshToken, token.RefreshTokenExpiresAt, Arg.Any<CancellationToken>());
         await _securityAudit.Received(1).LoginSucceededAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
         await _securityAudit.Received(1).TokenIssuedAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<DateTime>(), Arg.Any<CancellationToken>());
-        await _outboxStore.Received(1).AddAsync(Arg.Any<FSH.Framework.Eventing.Abstractions.IIntegrationEvent>(), Arg.Any<CancellationToken>());
+        await _outboxStore.Received(1).AddAsync(Arg.Any<ERA.Framework.Eventing.Abstractions.IIntegrationEvent>(), Arg.Any<CancellationToken>());
     }
 
     #endregion
@@ -223,7 +223,7 @@ public sealed class GenerateTokenCommandHandlerTests
         await _identityService.Received(1).ValidateCredentialsAsync(command.Email, command.Password, cancellationToken);
         await _tokenService.Received(1).IssueAsync(userId, claims, null, cancellationToken);
         await _identityService.Received(1).StoreRefreshTokenAsync(userId, token.RefreshToken, token.RefreshTokenExpiresAt, cancellationToken);
-        await _outboxStore.Received(1).AddAsync(Arg.Any<FSH.Framework.Eventing.Abstractions.IIntegrationEvent>(), cancellationToken);
+        await _outboxStore.Received(1).AddAsync(Arg.Any<ERA.Framework.Eventing.Abstractions.IIntegrationEvent>(), cancellationToken);
     }
 
     #endregion

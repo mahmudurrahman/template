@@ -1,15 +1,15 @@
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Persistence;
-using FSH.Framework.Shared.Constants;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Framework.Web.Origin;
-using FSH.Modules.Identity.Domain;
+using ERA.Framework.Persistence;
+using ERA.Framework.Shared.Constants;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Framework.Web.Origin;
+using ERA.Modules.Identity.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace FSH.Modules.Identity.Data;
+namespace ERA.Modules.Identity.Data;
 
 internal sealed class IdentityDbInitializer(
     ILogger<IdentityDbInitializer> logger,

@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Finbuckle.MultiTenant.Abstractions;
 
-namespace FSH.Framework.Shared.Multitenancy;
+namespace ERA.Framework.Shared.Multitenancy;
 
 public class AppTenantInfo : TenantInfo, IAppTenantInfo
 {

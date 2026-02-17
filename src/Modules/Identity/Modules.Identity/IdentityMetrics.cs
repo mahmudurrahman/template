@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.Metrics;
 
-namespace FSH.Modules.Identity;
+namespace ERA.Modules.Identity;
 
 public sealed class IdentityMetrics : IDisposable
 {

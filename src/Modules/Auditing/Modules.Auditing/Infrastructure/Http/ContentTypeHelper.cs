@@ -1,6 +1,6 @@
 using Microsoft.Net.Http.Headers;
 
-namespace FSH.Modules.Auditing;
+namespace ERA.Modules.Auditing;
 
 internal static class ContentTypeHelper
 {

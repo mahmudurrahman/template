@@ -1,7 +1,7 @@
-﻿using FSH.Modules.Identity.Contracts.DTOs;
+﻿using ERA.Modules.Identity.Contracts.DTOs;
 using System.Security.Claims;
 
-namespace FSH.Modules.Identity.Contracts.Services;
+namespace ERA.Modules.Identity.Contracts.Services;
 
 public interface ITokenService
 {

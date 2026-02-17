@@ -1,13 +1,13 @@
 ﻿using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Core.Common;
-using FSH.Framework.Shared.Identity.Claims;
-using FSH.Framework.Shared.Multitenancy;
+using ERA.Framework.Core.Common;
+using ERA.Framework.Shared.Identity.Claims;
+using ERA.Framework.Shared.Multitenancy;
 using Hangfire.Client;
 using Hangfire.Logging;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.Framework.Jobs;
+namespace ERA.Framework.Jobs;
 
 public class FshJobFilter : IClientFilter
 {

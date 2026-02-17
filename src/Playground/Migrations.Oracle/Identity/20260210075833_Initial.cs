@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace FSH.Playground.Migrations.Oracle.Identity
+namespace ERA.Host.Migrations.Oracle.Identity
 {
     /// <inheritdoc />
     public partial class Initial : Migration

@@ -1,4 +1,4 @@
-﻿namespace FSH.Framework.Shared.Constants;
+﻿namespace ERA.Framework.Shared.Constants;
 public static class PermissionConstants
 {
     private static readonly List<FshPermission> _all = new()

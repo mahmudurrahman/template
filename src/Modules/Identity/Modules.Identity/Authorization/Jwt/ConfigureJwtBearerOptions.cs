@@ -1,4 +1,4 @@
-﻿using FSH.Framework.Core.Exceptions;
+﻿using ERA.Framework.Core.Exceptions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -7,7 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Text;
 
-namespace FSH.Modules.Identity.Authorization.Jwt;
+namespace ERA.Modules.Identity.Authorization.Jwt;
 
 public class ConfigureJwtBearerOptions : IConfigureNamedOptions<JwtBearerOptions>
 {

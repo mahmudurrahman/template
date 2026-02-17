@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace FSH.Playground.Migrations.PostgreSQL.MultiTenancy
+namespace ERA.Host.Migrations.PostgreSQL.MultiTenancy
 {
     /// <inheritdoc />
     public partial class IncreaseTenantThemeUrlLength : Migration

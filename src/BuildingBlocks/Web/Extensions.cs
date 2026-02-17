@@ -1,20 +1,20 @@
-﻿using FSH.Framework.Caching;
-using FSH.Framework.Jobs;
-using FSH.Framework.Mailing;
-using FSH.Framework.Persistence;
-using FSH.Framework.Web.Auth;
-using FSH.Framework.Web.Cors;
-using FSH.Framework.Web.Exceptions;
-using FSH.Framework.Web.Health;
-using FSH.Framework.Web.Mediator.Behaviors;
-using FSH.Framework.Web.Modules;
-using FSH.Framework.Web.Observability.Logging.Serilog;
-using FSH.Framework.Web.Observability.OpenTelemetry;
-using FSH.Framework.Web.OpenApi;
-using FSH.Framework.Web.Origin;
-using FSH.Framework.Web.RateLimiting;
-using FSH.Framework.Web.Security;
-using FSH.Framework.Web.Versioning;
+﻿using ERA.Framework.Caching;
+using ERA.Framework.Jobs;
+using ERA.Framework.Mailing;
+using ERA.Framework.Persistence;
+using ERA.Framework.Web.Auth;
+using ERA.Framework.Web.Cors;
+using ERA.Framework.Web.Exceptions;
+using ERA.Framework.Web.Health;
+using ERA.Framework.Web.Mediator.Behaviors;
+using ERA.Framework.Web.Modules;
+using ERA.Framework.Web.Observability.Logging.Serilog;
+using ERA.Framework.Web.Observability.OpenTelemetry;
+using ERA.Framework.Web.OpenApi;
+using ERA.Framework.Web.Origin;
+using ERA.Framework.Web.RateLimiting;
+using ERA.Framework.Web.Security;
+using ERA.Framework.Web.Versioning;
 using Mediator;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -22,7 +22,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 
-namespace FSH.Framework.Web;
+namespace ERA.Framework.Web;
 
 public static class Extensions
 {

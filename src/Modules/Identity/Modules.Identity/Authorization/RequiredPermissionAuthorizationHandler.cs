@@ -1,9 +1,9 @@
-using FSH.Framework.Shared.Identity.Claims;
-using FSH.Modules.Identity.Contracts.Services;
+using ERA.Framework.Shared.Identity.Claims;
+using ERA.Modules.Identity.Contracts.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 
-namespace FSH.Modules.Identity.Authorization;
+namespace ERA.Modules.Identity.Authorization;
 
 public sealed class RequiredPermissionAuthorizationHandler(IUserService userService) : AuthorizationHandler<PermissionAuthorizationRequirement>
 {

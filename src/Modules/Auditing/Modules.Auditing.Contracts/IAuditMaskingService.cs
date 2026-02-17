@@ -1,4 +1,4 @@
-﻿namespace FSH.Modules.Auditing.Contracts;
+﻿namespace ERA.Modules.Auditing.Contracts;
 
 /// <summary>
 /// Masks or hashes sensitive fields before persistence or externalization.

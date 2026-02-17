@@ -1,6 +1,6 @@
-using FSH.Modules.Identity.Contracts.DTOs;
+using ERA.Modules.Identity.Contracts.DTOs;
 
-namespace FSH.Modules.Identity.Contracts.Services;
+namespace ERA.Modules.Identity.Contracts.Services;
 
 public interface IRoleService
 {

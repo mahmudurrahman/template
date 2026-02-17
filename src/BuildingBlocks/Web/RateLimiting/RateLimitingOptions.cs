@@ -1,4 +1,4 @@
-namespace FSH.Framework.Web.RateLimiting;
+namespace ERA.Framework.Web.RateLimiting;
 
 public sealed class RateLimitingOptions
 {

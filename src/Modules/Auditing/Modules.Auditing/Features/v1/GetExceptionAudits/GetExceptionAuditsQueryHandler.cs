@@ -1,11 +1,11 @@
-using FSH.Modules.Auditing.Contracts;
-using FSH.Modules.Auditing.Contracts.Dtos;
-using FSH.Modules.Auditing.Contracts.v1.GetExceptionAudits;
-using FSH.Modules.Auditing.Persistence;
+using ERA.Modules.Auditing.Contracts;
+using ERA.Modules.Auditing.Contracts.Dtos;
+using ERA.Modules.Auditing.Contracts.v1.GetExceptionAudits;
+using ERA.Modules.Auditing.Persistence;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.Modules.Auditing.Features.v1.GetExceptionAudits;
+namespace ERA.Modules.Auditing.Features.v1.GetExceptionAudits;
 
 public sealed class GetExceptionAuditsQueryHandler : IQueryHandler<GetExceptionAuditsQuery, IReadOnlyList<AuditSummaryDto>>
 {

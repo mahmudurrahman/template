@@ -1,11 +1,11 @@
-using FSH.Modules.Identity.Contracts.v1.Users.ChangePassword;
+using ERA.Modules.Identity.Contracts.v1.Users.ChangePassword;
 using Mediator;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 
-namespace FSH.Modules.Identity.Features.v1.Users.ChangePassword;
+namespace ERA.Modules.Identity.Features.v1.Users.ChangePassword;
 
 public static class ChangePasswordEndpoint
 {

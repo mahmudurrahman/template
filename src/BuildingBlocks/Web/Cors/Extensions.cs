@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using AspNetCorsOptions = Microsoft.AspNetCore.Cors.Infrastructure.CorsOptions;
 
-namespace FSH.Framework.Web.Cors;
+namespace ERA.Framework.Web.Cors;
 
 public static class Extensions
 {

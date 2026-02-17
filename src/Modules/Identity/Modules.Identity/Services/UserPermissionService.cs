@@ -1,13 +1,13 @@
-using FSH.Framework.Caching;
-using FSH.Framework.Core.Exceptions;
-using FSH.Framework.Shared.Constants;
-using FSH.Modules.Identity.Contracts.Services;
-using FSH.Modules.Identity.Data;
-using FSH.Modules.Identity.Domain;
+using ERA.Framework.Caching;
+using ERA.Framework.Core.Exceptions;
+using ERA.Framework.Shared.Constants;
+using ERA.Modules.Identity.Contracts.Services;
+using ERA.Modules.Identity.Data;
+using ERA.Modules.Identity.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.Modules.Identity.Services;
+namespace ERA.Modules.Identity.Services;
 
 internal sealed class UserPermissionService(
     UserManager<FshUser> userManager,

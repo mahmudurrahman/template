@@ -1,16 +1,16 @@
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Core.Exceptions;
-using FSH.Framework.Shared.Constants;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Identity.Contracts.Services;
-using FSH.Modules.Identity.Domain;
+using ERA.Framework.Core.Exceptions;
+using ERA.Framework.Shared.Constants;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Identity.Contracts.Services;
+using ERA.Modules.Identity.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
-namespace FSH.Modules.Identity.Services;
+namespace ERA.Modules.Identity.Services;
 
 public sealed class IdentityService : IIdentityService
 {

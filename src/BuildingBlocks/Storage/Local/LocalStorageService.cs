@@ -1,11 +1,11 @@
-using FSH.Framework.Shared.Storage;
-using FSH.Framework.Storage.DTOs;
-using FSH.Framework.Storage.Services;
+using ERA.Framework.Shared.Storage;
+using ERA.Framework.Storage.DTOs;
+using ERA.Framework.Storage.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.StaticFiles;
 using System.Text.RegularExpressions;
 
-namespace FSH.Framework.Storage.Local;
+namespace ERA.Framework.Storage.Local;
 
 public class LocalStorageService : IStorageService
 {

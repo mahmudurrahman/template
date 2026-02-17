@@ -1,8 +1,8 @@
-using FSH.Modules.Identity.Contracts.Services;
-using FSH.Modules.Identity.Contracts.v1.Users.RegisterUser;
+using ERA.Modules.Identity.Contracts.Services;
+using ERA.Modules.Identity.Contracts.v1.Users.RegisterUser;
 using Mediator;
 
-namespace FSH.Modules.Identity.Features.v1.Users.RegisterUser;
+namespace ERA.Modules.Identity.Features.v1.Users.RegisterUser;
 
 public sealed class RegisterUserCommandHandler : ICommandHandler<RegisterUserCommand, RegisterUserResponse>
 {

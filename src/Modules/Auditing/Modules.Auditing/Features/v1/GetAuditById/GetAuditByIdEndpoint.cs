@@ -1,12 +1,12 @@
-using FSH.Framework.Shared.Identity;
-using FSH.Framework.Shared.Identity.Authorization;
-using FSH.Modules.Auditing.Contracts.v1.GetAuditById;
+using ERA.Framework.Shared.Identity;
+using ERA.Framework.Shared.Identity.Authorization;
+using ERA.Modules.Auditing.Contracts.v1.GetAuditById;
 using Mediator;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 
-namespace FSH.Modules.Auditing.Features.v1.GetAuditById;
+namespace ERA.Modules.Auditing.Features.v1.GetAuditById;
 
 public static class GetAuditByIdEndpoint
 {

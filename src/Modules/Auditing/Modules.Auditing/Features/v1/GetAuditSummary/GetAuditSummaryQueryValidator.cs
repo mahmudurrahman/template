@@ -1,7 +1,7 @@
 using FluentValidation;
-using FSH.Modules.Auditing.Contracts.v1.GetAuditSummary;
+using ERA.Modules.Auditing.Contracts.v1.GetAuditSummary;
 
-namespace FSH.Modules.Auditing.Features.v1.GetAuditSummary;
+namespace ERA.Modules.Auditing.Features.v1.GetAuditSummary;
 
 public sealed class GetAuditSummaryQueryValidator : AbstractValidator<GetAuditSummaryQuery>
 {

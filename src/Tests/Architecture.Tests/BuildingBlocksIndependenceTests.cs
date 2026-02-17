@@ -1,7 +1,7 @@
-using FSH.Framework.Core;
-using FSH.Framework.Persistence;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Framework.Web;
+using ERA.Framework.Core;
+using ERA.Framework.Persistence;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Framework.Web;
 using NetArchTest.Rules;
 using Shouldly;
 using System.Reflection;

@@ -1,6 +1,6 @@
-using FSH.Framework.Core.Domain;
+using ERA.Framework.Core.Domain;
 
-namespace FSH.Modules.Multitenancy.Domain;
+namespace ERA.Modules.Multitenancy.Domain;
 
 public class TenantTheme : BaseEntity<Guid>, IHasTenant, IAuditableEntity
 {

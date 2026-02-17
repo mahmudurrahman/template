@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FSH.Framework.Eventing.Inbox;
+namespace ERA.Framework.Eventing.Inbox;
 
 /// <summary>
 /// Inbox message to track processed integration events per handler for idempotent consumers.

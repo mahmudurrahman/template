@@ -1,7 +1,7 @@
 using FluentValidation;
-using FSH.Modules.Identity.Contracts.v1.Users.DeleteUser;
+using ERA.Modules.Identity.Contracts.v1.Users.DeleteUser;
 
-namespace FSH.Modules.Identity.Features.v1.Users.DeleteUser;
+namespace ERA.Modules.Identity.Features.v1.Users.DeleteUser;
 
 public sealed class DeleteUserCommandValidator : AbstractValidator<DeleteUserCommand>
 {

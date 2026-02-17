@@ -1,4 +1,4 @@
-﻿namespace FSH.Modules.Auditing.Contracts;
+﻿namespace ERA.Modules.Auditing.Contracts;
 
 /// <summary>
 /// Ambient context for the current operation/request. 

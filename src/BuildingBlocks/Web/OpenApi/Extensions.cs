@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.OpenApi;
 using Scalar.AspNetCore;
 
-namespace FSH.Framework.Web.OpenApi;
+namespace ERA.Framework.Web.OpenApi;
 
 public static class Extensions
 {

@@ -1,7 +1,7 @@
-using FSH.Modules.Auditing.Contracts;
+using ERA.Modules.Auditing.Contracts;
 using System.Diagnostics;
 
-namespace FSH.Modules.Auditing;
+namespace ERA.Modules.Auditing;
 
 /// <summary>
 /// Fluent entry-point to create and publish audit events.

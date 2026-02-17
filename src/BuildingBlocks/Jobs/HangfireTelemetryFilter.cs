@@ -2,7 +2,7 @@ using Hangfire.Common;
 using Hangfire.Server;
 using System.Diagnostics;
 
-namespace FSH.Framework.Jobs;
+namespace ERA.Framework.Jobs;
 
 /// <summary>
 /// Adds basic tracing around Hangfire job execution.

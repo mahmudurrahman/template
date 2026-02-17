@@ -1,4 +1,4 @@
-﻿namespace FSH.Framework.Shared.Constants;
+﻿namespace ERA.Framework.Shared.Constants;
 public static class ActionConstants
 {
     public const string View = nameof(View);

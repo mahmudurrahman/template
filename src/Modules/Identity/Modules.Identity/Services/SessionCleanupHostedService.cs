@@ -1,10 +1,10 @@
-using FSH.Modules.Identity.Data;
+using ERA.Modules.Identity.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.Modules.Identity.Services;
+namespace ERA.Modules.Identity.Services;
 
 /// <summary>
 /// Background service that periodically cleans up expired sessions.

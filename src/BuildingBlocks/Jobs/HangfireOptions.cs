@@ -1,4 +1,4 @@
-namespace FSH.Framework.Jobs;
+namespace ERA.Framework.Jobs;
 
 public class HangfireOptions
 {

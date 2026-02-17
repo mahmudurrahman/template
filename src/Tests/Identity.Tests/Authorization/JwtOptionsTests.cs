@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-using FSH.Modules.Identity.Authorization.Jwt;
+using ERA.Modules.Identity.Authorization.Jwt;
 
 namespace Identity.Tests.Authorization;
 

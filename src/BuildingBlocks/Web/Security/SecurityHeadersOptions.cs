@@ -1,4 +1,4 @@
-namespace FSH.Framework.Web.Security;
+namespace ERA.Framework.Web.Security;
 
 public sealed class SecurityHeadersOptions
 {

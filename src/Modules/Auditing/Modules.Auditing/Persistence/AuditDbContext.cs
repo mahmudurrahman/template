@@ -1,13 +1,13 @@
 ﻿using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Persistence;
-using FSH.Framework.Persistence.Context;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Framework.Shared.Persistence;
+using ERA.Framework.Persistence;
+using ERA.Framework.Persistence.Context;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Framework.Shared.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 
-namespace FSH.Modules.Auditing.Persistence;
+namespace ERA.Modules.Auditing.Persistence;
 
 public sealed class AuditDbContext : BaseDbContext
 {

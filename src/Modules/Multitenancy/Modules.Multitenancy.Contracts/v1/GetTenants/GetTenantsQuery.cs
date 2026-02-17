@@ -1,8 +1,8 @@
-using FSH.Framework.Shared.Persistence;
-using FSH.Modules.Multitenancy.Contracts.Dtos;
+using ERA.Framework.Shared.Persistence;
+using ERA.Modules.Multitenancy.Contracts.Dtos;
 using Mediator;
 
-namespace FSH.Modules.Multitenancy.Contracts.v1.GetTenants;
+namespace ERA.Modules.Multitenancy.Contracts.v1.GetTenants;
 
 public sealed class GetTenantsQuery : IPagedQuery, IQuery<PagedResponse<TenantDto>>
 {

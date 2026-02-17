@@ -12,9 +12,9 @@ public sealed class HandlerArchitectureTests
 {
     private static readonly Assembly[] ModuleAssemblies =
     [
-        typeof(FSH.Modules.Auditing.AuditingModule).Assembly,
-        typeof(FSH.Modules.Identity.IdentityModule).Assembly,
-        typeof(FSH.Modules.Multitenancy.MultitenancyModule).Assembly
+        typeof(ERA.Modules.Auditing.AuditingModule).Assembly,
+        typeof(ERA.Modules.Identity.IdentityModule).Assembly,
+        typeof(ERA.Modules.Multitenancy.MultitenancyModule).Assembly
     ];
 
     [Fact]

@@ -1,9 +1,9 @@
-using FSH.Framework.Shared.Persistence;
-using FSH.Modules.Multitenancy.Contracts.Dtos;
-using FSH.Modules.Multitenancy.Contracts.v1.GetTenants;
-using FSH.Framework.Shared.Multitenancy;
+using ERA.Framework.Shared.Persistence;
+using ERA.Modules.Multitenancy.Contracts.Dtos;
+using ERA.Modules.Multitenancy.Contracts.v1.GetTenants;
+using ERA.Framework.Shared.Multitenancy;
 
-namespace FSH.Modules.Multitenancy.Contracts;
+namespace ERA.Modules.Multitenancy.Contracts;
 
 public interface ITenantService
 {

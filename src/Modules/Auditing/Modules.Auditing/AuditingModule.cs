@@ -1,15 +1,15 @@
 using Asp.Versioning;
-using FSH.Framework.Persistence;
-using FSH.Framework.Web.Modules;
-using FSH.Modules.Auditing.Contracts;
-using FSH.Modules.Auditing.Features.v1.GetAuditById;
-using FSH.Modules.Auditing.Features.v1.GetAudits;
-using FSH.Modules.Auditing.Features.v1.GetAuditsByCorrelation;
-using FSH.Modules.Auditing.Features.v1.GetAuditsByTrace;
-using FSH.Modules.Auditing.Features.v1.GetAuditSummary;
-using FSH.Modules.Auditing.Features.v1.GetExceptionAudits;
-using FSH.Modules.Auditing.Features.v1.GetSecurityAudits;
-using FSH.Modules.Auditing.Persistence;
+using ERA.Framework.Persistence;
+using ERA.Framework.Web.Modules;
+using ERA.Modules.Auditing.Contracts;
+using ERA.Modules.Auditing.Features.v1.GetAuditById;
+using ERA.Modules.Auditing.Features.v1.GetAudits;
+using ERA.Modules.Auditing.Features.v1.GetAuditsByCorrelation;
+using ERA.Modules.Auditing.Features.v1.GetAuditsByTrace;
+using ERA.Modules.Auditing.Features.v1.GetAuditSummary;
+using ERA.Modules.Auditing.Features.v1.GetExceptionAudits;
+using ERA.Modules.Auditing.Features.v1.GetSecurityAudits;
+using ERA.Modules.Auditing.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -18,7 +18,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 
-namespace FSH.Modules.Auditing;
+namespace ERA.Modules.Auditing;
 
 public class AuditingModule : IModule
 {

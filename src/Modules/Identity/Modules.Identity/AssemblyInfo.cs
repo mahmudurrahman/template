@@ -1,5 +1,5 @@
 using System.Runtime.CompilerServices;
-using FSH.Framework.Web.Modules;
+using ERA.Framework.Web.Modules;
 
-[assembly: FshModule(typeof(FSH.Modules.Identity.IdentityModule), 100)]
+[assembly: FshModule(typeof(ERA.Modules.Identity.IdentityModule), 100)]
 [assembly: InternalsVisibleTo("Identity.Tests")]

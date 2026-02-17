@@ -1,15 +1,15 @@
 using Finbuckle.MultiTenant.Abstractions;
-using FSH.Framework.Core.Context;
-using FSH.Framework.Core.Exceptions;
-using FSH.Framework.Shared.Constants;
-using FSH.Framework.Shared.Multitenancy;
-using FSH.Modules.Auditing.Contracts;
-using FSH.Modules.Identity.Contracts.Services;
-using FSH.Modules.Identity.Domain;
+using ERA.Framework.Core.Context;
+using ERA.Framework.Core.Exceptions;
+using ERA.Framework.Shared.Constants;
+using ERA.Framework.Shared.Multitenancy;
+using ERA.Modules.Auditing.Contracts;
+using ERA.Modules.Identity.Contracts.Services;
+using ERA.Modules.Identity.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.Modules.Identity.Services;
+namespace ERA.Modules.Identity.Services;
 
 internal sealed class UserStatusService(
     UserManager<FshUser> userManager,

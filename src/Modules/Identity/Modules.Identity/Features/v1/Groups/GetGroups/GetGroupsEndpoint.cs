@@ -1,12 +1,12 @@
-using FSH.Framework.Shared.Identity;
-using FSH.Framework.Shared.Identity.Authorization;
-using FSH.Modules.Identity.Contracts.v1.Groups.GetGroups;
+using ERA.Framework.Shared.Identity;
+using ERA.Framework.Shared.Identity.Authorization;
+using ERA.Modules.Identity.Contracts.v1.Groups.GetGroups;
 using Mediator;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 
-namespace FSH.Modules.Identity.Features.v1.Groups.GetGroups;
+namespace ERA.Modules.Identity.Features.v1.Groups.GetGroups;
 
 public static class GetGroupsEndpoint
 {

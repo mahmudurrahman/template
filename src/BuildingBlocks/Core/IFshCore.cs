@@ -1,4 +1,4 @@
-﻿namespace FSH.Framework.Core;
+﻿namespace ERA.Framework.Core;
 public interface IFshCore
 {
 }

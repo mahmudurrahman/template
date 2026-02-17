@@ -1,4 +1,4 @@
-namespace FSH.Framework.Caching;
+namespace ERA.Framework.Caching;
 
 /// <summary>
 /// Extension methods for <see cref="ICacheService"/> providing cache-aside pattern implementations.

@@ -1,4 +1,4 @@
-﻿namespace FSH.Framework.Web.OpenApi;
+﻿namespace ERA.Framework.Web.OpenApi;
 public sealed class OpenApiOptions
 {
     public required string Title { get; init; }

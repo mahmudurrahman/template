@@ -1,6 +1,6 @@
-using FSH.Framework.Shared.Storage;
+using ERA.Framework.Shared.Storage;
 
-namespace FSH.Modules.Multitenancy.Contracts.Dtos;
+namespace ERA.Modules.Multitenancy.Contracts.Dtos;
 
 public sealed record TenantThemeDto
 {

@@ -1,4 +1,4 @@
-﻿namespace FSH.Framework.Caching;
+﻿namespace ERA.Framework.Caching;
 
 public sealed class CachingOptions
 {

@@ -1,13 +1,13 @@
-using FSH.Framework.Shared.Identity;
-using FSH.Framework.Shared.Identity.Authorization;
-using FSH.Modules.Auditing.Contracts.v1.GetExceptionAudits;
+using ERA.Framework.Shared.Identity;
+using ERA.Framework.Shared.Identity.Authorization;
+using ERA.Modules.Auditing.Contracts.v1.GetExceptionAudits;
 using Mediator;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 
-namespace FSH.Modules.Auditing.Features.v1.GetExceptionAudits;
+namespace ERA.Modules.Auditing.Features.v1.GetExceptionAudits;
 
 public static class GetExceptionAuditsEndpoint
 {
